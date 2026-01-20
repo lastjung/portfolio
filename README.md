@@ -1,4 +1,6 @@
-# AGENTIC.DEV | Next-Gen AI & Fullstack Portfolio
+# ENGINEERING.PORTFOLIO | Next-Gen AI & Visual Exploration
+
+**🔗 Live Demo: [https://lastjung.github.io/portfolio/](https://lastjung.github.io/portfolio/)**
 
 A premium, interactive portfolio showcasing the intersection of **Mathematical Intuition**, **Cutting-edge AI**, and **Creative Web Engineering**. This project bridges complex algorithmic logic with immersive visual experiences.
 
@@ -94,4 +96,4 @@ The UI follows a **Glassmorphic** and **Cyberpunk-inspired** aesthetic, prioriti
 
 ---
 
-© 2026 AGENTIC.DEV | Engineering the Future of Perception.
+© 2026 ENGINEERING.PORTFOLIO | Engineering the Future of Perception.
