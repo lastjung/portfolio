@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Inventory | Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050508;
+            color: #e0e0e0;
+        }
+        .font-orbitron { font-family: 'Orbitron', sans-serif; }
+        .glass {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .section-card {
+            border-left: 4px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .section-card:hover { border-left-color: currentColor; }
+        tr:hover { background: rgba(255, 255, 255, 0.03); }
+        .neon-text { text-shadow: 0 0 15px currentColor; }
+        
+        .cat-ai { color: #22d3ee; } /* Cyan */
+        .cat-creative { color: #a855f7; } /* Purple */
+        .cat-math { color: #6366f1; } /* Indigo */
+        .cat-game { color: #22c55e; } /* Green */
+    </style>
+</head>
+<body class="p-8 md:p-16 lg:px-32">
+    <div class="max-w-7xl mx-auto space-y-20">
+        <!-- Header -->
+        <header class="flex flex-col md:flex-row justify-between items-start md:items-end border-b border-white/10 pb-12 gap-6">
+            <div class="space-y-3">
+                <h1 class="text-4xl font-orbitron font-black text-white uppercase tracking-tighter italic">
+                    AGENTIC.<span class="text-cyan-400">INVENTORY</span>
+                </h1>
+                <p class="text-white/40 text-[10px] font-bold uppercase tracking-[0.3em]">System Level Infrastructure / Central Registry</p>
+            </div>
+            <div class="flex gap-4">
+                <a href="index.html" class="text-[10px] font-bold text-white/40 hover:text-white transition-colors uppercase tracking-widest bg-white/5 border border-white/10 px-6 py-3 rounded-full hover:bg-white/10">Return to Field</a>
+            </div>
+        </header>
+
+        <!-- Category: AI & Intelligence -->
+        <section class="space-y-6">
+            <div class="flex items-center gap-4 cat-ai">
+                <div class="w-2 h-8 bg-current"></div>
+                <h2 class="text-xl font-orbitron font-black uppercase tracking-widest neon-text">AI & Intelligence</h2>
+                <span class="text-[10px] font-bold py-1 px-3 bg-current/10 rounded-full">CORE SYSTEMS</span>
+            </div>
+            <div class="overflow-x-auto glass rounded-2xl overflow-hidden">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="text-[10px] font-orbitron font-bold text-white/40 uppercase tracking-widest border-b border-white/10 bg-white/[0.02]">
+                            <th class="px-8 py-5">System Identity</th>
+                            <th class="px-8 py-5">Live Instance</th>
+                            <th class="px-8 py-5">Source Repo</th>
+                            <th class="px-8 py-5">Internal Summary</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-xs">
+                        <tr>
+                            <td class="px-8 py-6 font-bold text-white/90">Fridge Chef</td>
+                            <td class="px-8 py-6 text-white/20">-</td>
+                            <td class="px-8 py-6"><a href="https://github.com/lastjung/Fridge-Chef" target="_blank" class="text-cyan-400 hover:underline">Repo ↗</a></td>
+                            <td class="px-8 py-6 text-white/50">Smart kitchen assistant with AI ingredient recognition and recipe suggestions.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-8 py-6 font-bold text-white/90">Target Finder</td>
+                            <td class="px-8 py-6 text-white/20">-</td>
+                            <td class="px-8 py-6"><a href="https://github.com/lastjung/target_finder" target="_blank" class="text-cyan-400 hover:underline">Repo ↗</a></td>
+                            <td class="px-8 py-6 text-white/50">Data discovery tool combining YouTube API and AI for trend analysis.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-8 py-6 font-bold text-white/90">Lotto Oracle</td>
+                            <td class="px-8 py-6"><a href="https://lotto-ai-pro.vercel.app/" target="_blank" class="text-cyan-400 hover:underline">Live ↗</a></td>
+                            <td class="px-8 py-6"><a href="https://github.com/lastjung/lotto-oracle" target="_blank" class="text-cyan-400 hover:underline">Repo ↗</a></td>
+                            <td class="px-8 py-6 text-white/50">AI lottery simulator using Transformer and LSTM for global systems.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Category: Creative & Visual Lab -->
+        <section class="space-y-6">
+            <div class="flex items-center gap-4 cat-creative">
+                <div class="w-2 h-8 bg-current"></div>
+                <h2 class="text-xl font-orbitron font-black uppercase tracking-widest neon-text">Creative & Visual Lab</h2>
+                <span class="text-[10px] font-bold py-1 px-3 bg-current/10 rounded-full">EXPERIENCE DESIGN</span>
+            </div>
+            <div class="overflow-x-auto glass rounded-2xl overflow-hidden">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="text-[10px] font-orbitron font-bold text-white/40 uppercase tracking-widest border-b border-white/10 bg-white/[0.02]">
+                            <th class="px-8 py-5">Artist's Logic</th>
+                            <th class="px-8 py-5">Live Instance</th>
+                            <th class="px-8 py-5">Source/Sub</th>
+                            <th class="px-8 py-5">Visual Summary</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-xs">
+                        <tr>
+                            <td class="px-8 py-6 font-bold text-white/90">Cyber HUD Universe</td>
+                            <td class="px-8 py-6"><a href="https://lastjung.github.io/openai_experience/cyber-hud/index.html" target="_blank" class="text-purple-400 hover:underline">Live ↗</a></td>
+                            <td class="px-8 py-6"><a href="https://lastjung.github.io/openai_experience/" target="_blank" class="text-purple-400 hover:underline">Main ↗</a></td>
+                            <td class="px-8 py-6 text-white/50">Three.js particle system creating an immersive cyber atmospheric HUD.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-8 py-6 font-bold text-white/90">Canvas Fluid</td>
+                            <td class="px-8 py-6"><a href="https://lastjung.github.io/openai_experience/canvas-fluid/index.html" target="_blank" class="text-purple-400 hover:underline">Live ↗</a></td>
+                            <td class="px-8 py-6"><a href="https://lastjung.github.io/openai_experience/" target="_blank" class="text-purple-400 hover:underline">Main ↗</a></td>
+                            <td class="px-8 py-6 text-white/50">High-performance interactive fluid simulation using HTML5 Canvas.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-8 py-6 font-bold text-white/90">GLSL Kaleidoscope</td>
+                            <td class="px-8 py-6"><a href="https://lastjung.github.io/openai_experience/glsl-kaleidoscope/index.html" target="_blank" class="text-purple-400 hover:underline">Live ↗</a></td>
+                            <td class="px-8 py-6"><a href="https://lastjung.github.io/openai_experience/" target="_blank" class="text-purple-400 hover:underline">Main ↗</a></td>
+                            <td class="px-8 py-6 text-white/50">Fractal kaleidoscope effects powered by custom GLSL fragment shaders.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-8 py-6 font-bold text-white/90">Aurora Fluid WebGL</td>
+                            <td class="px-8 py-6"><a href="https://lastjung.github.io/openai_experience/aurora-fluid-webgl/" target="_blank" class="text-purple-400 hover:underline">Live ↗</a></td>
+                            <td class="px-8 py-6 text-white/20">-</td>
+                            <td class="px-8 py-6 text-white/50">Interactive WebGL shader exploring fluid dynamics and aurora visuals.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-8 py-6 font-bold text-white/90">Velvet Cloth Physics</td>
+                            <td class="px-8 py-6"><a href="https://lastjung.github.io/openai_experience/velvet-cloth/" target="_blank" class="text-purple-400 hover:underline">Live ↗</a></td>
+                            <td class="px-8 py-6 text-white/20">-</td>
+                            <td class="px-8 py-6 text-white/50">Matter.js based physics simulation of realistic velvet fabric movement.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-8 py-6 font-bold text-white/90">Neon Slime/Jelly</td>
+                            <td class="px-8 py-6"><a href="https://lastjung.github.io/openai_experience/neon-slime/" target="_blank" class="text-purple-400 hover:underline">Live ↗</a></td>
+                            <td class="px-8 py-6 text-white/20">-</td>
+                            <td class="px-8 py-6 text-white/50">Interactive neon jelly dynamics blending creative coding and physics.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-8 py-6 font-bold text-white/90">Agency Landing</td>
+                            <td class="px-8 py-6"><a href="https://lastjung.github.io/openai_experience/agency-landing/index.html" target="_blank" class="text-purple-400 hover:underline">Live ↗</a></td>
+                            <td class="px-8 py-6 text-white/20">-</td>
+                            <td class="px-8 py-6 text-white/50">Premium aesthetic landing page design showcasing modern UI/UX trends.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-8 py-6 font-bold text-white/90">Church Management</td>
+                            <td class="px-8 py-6"><a href="https://church-oakville.vercel.app/" target="_blank" class="text-purple-400 hover:underline">Live ↗</a></td>
+                            <td class="px-8 py-6 text-white/20">-</td>
+                            <td class="px-8 py-6 text-white/50">Community management platform built on Vercel for local administration.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Category: Math & Technical Foundations -->
+        <section class="space-y-6">
+            <div class="flex items-center gap-4 cat-math">
+                <div class="w-2 h-8 bg-current"></div>
+                <h2 class="text-xl font-orbitron font-black uppercase tracking-widest neon-text">Math & Technical Foundations</h2>
+                <span class="text-[10px] font-bold py-1 px-3 bg-current/10 rounded-full">ALGORITHMIC LOGIC</span>
+            </div>
+            <div class="overflow-x-auto glass rounded-2xl overflow-hidden">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="text-[10px] font-orbitron font-bold text-white/40 uppercase tracking-widest border-b border-white/10 bg-white/[0.02]">
+                            <th class="px-8 py-5">Formula Entity</th>
+                            <th class="px-8 py-5">Live Instance</th>
+                            <th class="px-8 py-5">Repository</th>
+                            <th class="px-8 py-5">Technical Summary</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-xs">
+                        <tr>
+                            <td class="px-8 py-6 font-bold text-white/90">2D Fourier Oracle</td>
+                            <td class="px-8 py-6"><a href="https://lastjung.github.io/fourier/?mode=2d" target="_blank" class="text-indigo-400 hover:underline">Live ↗</a></td>
+                            <td class="px-8 py-6"><a href="https://github.com/lastjung/fourier" target="_blank" class="text-indigo-400 hover:underline">Repo ↗</a></td>
+                            <td class="px-8 py-6 text-white/50">Discrete Fourier Transform visualizer for 2D waveforms and analysis.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-8 py-6 font-bold text-white/90">3D Fourier Space</td>
+                            <td class="px-8 py-6"><a href="https://lastjung.github.io/fourier/?mode=3d" target="_blank" class="text-indigo-400 hover:underline">Live ↗</a></td>
+                            <td class="px-8 py-6"><a href="https://github.com/lastjung/fourier" target="_blank" class="text-indigo-400 hover:underline">Repo ↗</a></td>
+                            <td class="px-8 py-6 text-white/50">3D frequency dimension exploration using harmonic synthesis.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-8 py-6 font-bold text-white/90">Ant Pheromone</td>
+                            <td class="px-8 py-6"><a href="https://lastjung.github.io/openai_experience/ant-pheromone/index.html" target="_blank" class="text-indigo-400 hover:underline">Live ↗</a></td>
+                            <td class="px-8 py-6 text-white/20">-</td>
+                            <td class="px-8 py-6 text-white/50">Emergent behavior simulation using ant colony optimization algorithms.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-8 py-6 font-bold text-white/90">GPS Tracker</td>
+                            <td class="px-8 py-6"><a href="https://lastjung.github.io/GPS-tracker/" target="_blank" class="text-indigo-400 hover:underline">Live ↗</a></td>
+                            <td class="px-8 py-6"><a href="https://github.com/lastjung/GPS-tracker" target="_blank" class="text-indigo-400 hover:underline">Repo ↗</a></td>
+                            <td class="px-8 py-6 text-white/50">Real-time city grid pathfinding visualization (A* Algorithm) for NYC & Barcelona.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Category: Interactive Gaming -->
+        <section class="space-y-6">
+            <div class="flex items-center gap-4 cat-game">
+                <div class="w-2 h-8 bg-current"></div>
+                <h2 class="text-xl font-orbitron font-black uppercase tracking-widest neon-text">Interactive Gaming</h2>
+                <span class="text-[10px] font-bold py-1 px-3 bg-current/10 rounded-full">REALTIME MECHANICS</span>
+            </div>
+            <div class="overflow-x-auto glass rounded-2xl overflow-hidden">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="text-[10px] font-orbitron font-bold text-white/40 uppercase tracking-widest border-b border-white/10 bg-white/[0.02]">
+                            <th class="px-8 py-5">Title Identity</th>
+                            <th class="px-8 py-5">Live Instance</th>
+                            <th class="px-8 py-5">Repository</th>
+                            <th class="px-8 py-5">Play Summary</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-xs">
+                        <tr>
+                            <td class="px-8 py-6 font-bold text-white/90">Steampunk Wave Flight</td>
+                            <td class="px-8 py-6"><a href="https://lastjung.github.io/wave-flight/" target="_blank" class="text-green-400 hover:underline">Live ↗</a></td>
+                            <td class="px-8 py-6"><a href="https://github.com/lastjung/wave-flight" target="_blank" class="text-green-400 hover:underline">Repo ↗</a></td>
+                            <td class="px-8 py-6 text-white/50">3D steampunk flight simulator featuring procedural terrain, trauma-based camera, and industrial adaptive audio.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-8 py-6 font-bold text-white/90">Neon Brick Breaker</td>
+                            <td class="px-8 py-6"><a href="https://lastjung.github.io/brick_breaker/" target="_blank" class="text-green-400 hover:underline">Live ↗</a></td>
+                            <td class="px-8 py-6"><a href="https://github.com/lastjung/brick_breaker" target="_blank" class="text-green-400 hover:underline">Repo ↗</a></td>
+                            <td class="px-8 py-6 text-white/50">Classic brick breaker reimagined with modern neon aesthetics (Vibe Coding).</td>
+                        </tr>
+                        <tr>
+                            <td class="px-8 py-6 font-bold text-white/90">Sort-Compare</td>
+                            <td class="px-8 py-6"><a href="https://lastjung.github.io/sort-compare/" target="_blank" class="text-green-400 hover:underline">Live ↗</a></td>
+                            <td class="px-8 py-6"><a href="https://github.com/lastjung/sort-compare" target="_blank" class="text-green-400 hover:underline">Repo ↗</a></td>
+                            <td class="px-8 py-6 text-white/50">Side-by-side sorting algorithm visualizer and performance analysis tool.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-8 py-6 font-bold text-white/90">Retro Wave Flight</td>
+                            <td class="px-8 py-6"><a href="https://lastjung.github.io/openai_experience/retro-wave-flight/index.html" target="_blank" class="text-green-400 hover:underline">Live ↗</a></td>
+                            <td class="px-8 py-6 text-white/20">-</td>
+                            <td class="px-8 py-6 text-white/50">80s aesthetic endless flight simulator with synthwave landscapes.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-8 py-6 font-bold text-white/90">Synthwave Shooter</td>
+                            <td class="px-8 py-6"><a href="https://lastjung.github.io/openai_experience/synthwave-shooter/index.html" target="_blank" class="text-green-400 hover:underline">Live ↗</a></td>
+                            <td class="px-8 py-6 text-white/20">-</td>
+                            <td class="px-8 py-6 text-white/50">Fast-paced retro-future rail shooter experience.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-8 py-6 font-bold text-white/90">Falling Sand</td>
+                            <td class="px-8 py-6"><a href="https://lastjung.github.io/openai_experience/falling-sand/index.html" target="_blank" class="text-green-400 hover:underline">Live ↗</a></td>
+                            <td class="px-8 py-6 text-white/20">-</td>
+                            <td class="px-8 py-6 text-white/50">Cellular automata sandbox focusing on particle interactions and gravity.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center space-y-4 border-t border-white/5 pt-16">
+            <p class="text-[10px] text-white/10 uppercase tracking-[0.5em]">CONFIDENTIAL AGENTIC.DEV INFRASTRUCTURE | SECURED ACCESS</p>
+            <div class="text-[8px] text-white/5 font-mono">ENCRYPTED PROJECT DATA v2.0.1 (CATEGORIZED_VIEW)</div>
+        </footer>
+    </div>
+</body>
+</html>
