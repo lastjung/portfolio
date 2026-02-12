@@ -21,7 +21,8 @@ function dft(x) {
 }
 
 // --- Background Engine ---
-class FourierBackground {
+
+export class FourierBackground {
   constructor(containerId) {
     this.container = document.getElementById(containerId);
     this.instances = [];
@@ -156,8 +157,3 @@ class FourierBackground {
     });
   }
 }
-
-// Start when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-  new FourierBackground('canvas-bg');
-});
