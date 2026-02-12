@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -15,9 +15,9 @@
     />
     <style>
       :root {
-        --color-primary: #3B82F6;
-        --color-bg: #0F172A;
-        --color-text: #F1F5F9;
+        --color-primary: #3b82f6;
+        --color-bg: #0f172a;
+        --color-text: #f1f5f9;
       }
       html {
         scroll-behavior: smooth;
@@ -49,20 +49,39 @@
       .neon-border {
         box-shadow: 0 0 20px rgba(0, 242, 255, 0.2);
       }
-      .shadow-neon { filter: drop-shadow(0 0 5px currentColor); }
-      .tracker-widest { letter-spacing: 0.3em; }
-      
-      /* Smooth Entrance Animation */
-      .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
-      .reveal.active { opacity: 1; transform: translateY(0); }
-      
-      @keyframes float {
-          0% { transform: translateY(0px); }
-          50% { transform: translateY(-10px); }
-          100% { transform: translateY(0px); }
+      .shadow-neon {
+        filter: drop-shadow(0 0 5px currentColor);
       }
-      .float-anim { animation: float 4s ease-in-out infinite; }
-      
+      .tracker-widest {
+        letter-spacing: 0.3em;
+      }
+
+      /* Smooth Entrance Animation */
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-out;
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+      .float-anim {
+        animation: float 4s ease-in-out infinite;
+      }
+
       ::-webkit-scrollbar {
         width: 6px;
       }
@@ -80,7 +99,7 @@
       .mobile-nav-link:hover {
         color: #22d3ee;
       }
-      
+
       /* Hamburger (Removed) */
     </style>
   </head>
@@ -103,42 +122,76 @@
         <li class="hover:text-cyan-400 transition-colors cursor-pointer">
           <a href="#hero">Home</a>
         </li>
-        <li class="hover:text-cyan-400 transition-colors cursor-pointer"><a href="#ai-lab">AI Lab</a></li>
-        <li class="hover:text-cyan-400 transition-colors cursor-pointer"><a href="#creative-lab">Creative</a></li>
-        <li class="hover:text-cyan-400 transition-colors cursor-pointer"><a href="#math-data">Math</a></li>
-        <li class="hover:text-cyan-400 transition-colors cursor-pointer"><a href="#gaming">Gaming</a></li>
-        <li class="hover:text-cyan-400 transition-colors cursor-pointer"><a href="#youtube">YouTube</a></li>
+        <li class="hover:text-cyan-400 transition-colors cursor-pointer">
+          <a href="#ai-lab">AI Lab</a>
+        </li>
+        <li class="hover:text-cyan-400 transition-colors cursor-pointer">
+          <a href="#creative-lab">Creative</a>
+        </li>
+        <li class="hover:text-cyan-400 transition-colors cursor-pointer">
+          <a href="#math-data">Math</a>
+        </li>
+        <li class="hover:text-cyan-400 transition-colors cursor-pointer">
+          <a href="#gaming">Gaming</a>
+        </li>
+        <li class="hover:text-cyan-400 transition-colors cursor-pointer">
+          <a href="#youtube">YouTube</a>
+        </li>
         <li class="hover:text-cyan-400 transition-colors cursor-pointer">
           <a href="#contact">Contact</a>
         </li>
       </ul>
-
     </nav>
 
     <!-- Mobile Bottom Navigation Bar -->
-    <div 
+    <div
       id="bottom-nav"
       class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[60] glass rounded-full px-6 py-3 flex gap-8 items-center md:hidden shadow-2xl border border-white/20 transition-all duration-500 translate-y-20 opacity-0"
     >
       <a href="#ai-lab" class="flex flex-col items-center gap-1 group">
-        <div class="w-1.5 h-1.5 rounded-full bg-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-        <span class="text-[8px] font-space font-bold uppercase tracking-widest text-white/50 group-hover:text-cyan-400 transition-colors">AI</span>
+        <div
+          class="w-1.5 h-1.5 rounded-full bg-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity"
+        ></div>
+        <span
+          class="text-[8px] font-space font-bold uppercase tracking-widest text-white/50 group-hover:text-cyan-400 transition-colors"
+          >AI</span
+        >
       </a>
       <a href="#creative-lab" class="flex flex-col items-center gap-1 group">
-        <div class="w-1.5 h-1.5 rounded-full bg-purple-400 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-        <span class="text-[8px] font-space font-bold uppercase tracking-widest text-white/50 group-hover:text-purple-400 transition-colors">Art</span>
+        <div
+          class="w-1.5 h-1.5 rounded-full bg-purple-400 opacity-0 group-hover:opacity-100 transition-opacity"
+        ></div>
+        <span
+          class="text-[8px] font-space font-bold uppercase tracking-widest text-white/50 group-hover:text-purple-400 transition-colors"
+          >Art</span
+        >
       </a>
       <a href="#math-data" class="flex flex-col items-center gap-1 group">
-        <div class="w-1.5 h-1.5 rounded-full bg-indigo-400 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-        <span class="text-[8px] font-space font-bold uppercase tracking-widest text-white/50 group-hover:text-indigo-400 transition-colors">Math</span>
+        <div
+          class="w-1.5 h-1.5 rounded-full bg-indigo-400 opacity-0 group-hover:opacity-100 transition-opacity"
+        ></div>
+        <span
+          class="text-[8px] font-space font-bold uppercase tracking-widest text-white/50 group-hover:text-indigo-400 transition-colors"
+          >Math</span
+        >
       </a>
       <a href="#gaming" class="flex flex-col items-center gap-1 group">
-        <div class="w-1.5 h-1.5 rounded-full bg-green-400 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-        <span class="text-[8px] font-space font-bold uppercase tracking-widest text-white/50 group-hover:text-green-400 transition-colors">Game</span>
+        <div
+          class="w-1.5 h-1.5 rounded-full bg-green-400 opacity-0 group-hover:opacity-100 transition-opacity"
+        ></div>
+        <span
+          class="text-[8px] font-space font-bold uppercase tracking-widest text-white/50 group-hover:text-green-400 transition-colors"
+          >Game</span
+        >
       </a>
       <a href="#contact" class="flex flex-col items-center gap-1 group">
-        <div class="w-1.5 h-1.5 rounded-full bg-white opacity-0 group-hover:opacity-100 transition-opacity"></div>
-        <span class="text-[8px] font-space font-bold uppercase tracking-widest text-white/50 group-hover:text-white transition-colors">Log</span>
+        <div
+          class="w-1.5 h-1.5 rounded-full bg-white opacity-0 group-hover:opacity-100 transition-opacity"
+        ></div>
+        <span
+          class="text-[8px] font-space font-bold uppercase tracking-widest text-white/50 group-hover:text-white transition-colors"
+          >Log</span
+        >
       </a>
     </div>
 
@@ -168,11 +221,13 @@
             class="max-w-2xl mx-auto text-white/70 text-lg md:text-xl font-light leading-relaxed"
           >
             Where mathematical intuition meets cutting-edge AI. <br />
-            Navigate through a next-gen portfolio bridging <br/>
+            Navigate through a next-gen portfolio bridging <br />
             <span class="text-cyan-300 font-bold">Complex Algorithms</span> and
             <span class="text-purple-300 font-bold">Creative Play</span>.
           </p>
-          <div class="pt-8 flex flex-col md:flex-row gap-6 justify-center items-center">
+          <div
+            class="pt-8 flex flex-col md:flex-row gap-6 justify-center items-center"
+          >
             <a
               href="#ai-lab"
               class="px-10 py-5 bg-cyan-500 hover:bg-cyan-400 text-black font-space font-bold uppercase tracking-wider text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/50 rounded-lg"
@@ -196,7 +251,19 @@
             class="text-[10px] font-space tracking-[0.3em] text-white/40 uppercase"
             >Scroll to decode</span
           >
-          <svg class="w-6 h-6 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+          <svg
+            class="w-6 h-6 text-white/40"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            ></path>
+          </svg>
         </div>
       </section>
 
@@ -221,17 +288,19 @@
               </h2>
             </div>
             <p class="max-w-md text-white/50 text-base leading-relaxed mb-2">
-              Intelligent tools combining LLMs and autonomous agents. Introducing
-              experimental projects that extract meaning from data and automate
-              user experiences.
+              Intelligent tools combining LLMs and autonomous agents.
+              Introducing experimental projects that extract meaning from data
+              and automate user experiences.
             </p>
           </div>
 
-          <div class="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Project Card 1: Fridge-Chef -->
             <div
-              class="break-inside-avoid group relative glass p-8 rounded-2xl hover:border-cyan-500/50 transition-all border border-white/5 overflow-hidden cursor-pointer"
-              onclick="window.open('https://github.com/lastjung/Fridge-Chef', '_blank')"
+              class="group relative glass p-8 rounded-2xl hover:border-cyan-500/50 transition-all border border-white/5 overflow-hidden flex flex-col justify-between h-full cursor-pointer"
+              onclick="
+                window.open('https://github.com/lastjung/Fridge-Chef', '_blank')
+              "
             >
               <div
                 class="absolute -right-20 -top-20 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl group-hover:bg-cyan-500/20 transition-all"
@@ -246,12 +315,14 @@
                   A smart kitchen assistant that recognizes ingredients using AI
                   and suggests optimal recipes.
                 </p>
-                <div class="flex justify-between items-center pt-8 border-t border-white/5">
+                <div
+                  class="flex justify-between items-center pt-8 border-t border-white/5"
+                >
                   <div class="flex gap-4">
                     <a
                       href="https://github.com/lastjung/Fridge-Chef"
                       target="_blank"
-                      onclick="event.stopPropagation();"
+                      onclick="event.stopPropagation()"
                       class="text-[10px] uppercase font-bold tracking-widest text-cyan-400 hover:text-white transition-colors"
                       >Github ↗</a
                     >
@@ -264,8 +335,13 @@
             </div>
             <!-- Project Card 2: Tube Finder -->
             <div
-              class="break-inside-avoid group relative glass p-8 rounded-2xl hover:border-indigo-500/50 transition-all border border-white/5 overflow-hidden flex flex-col justify-between h-[450px] cursor-pointer"
-              onclick="window.open('https://github.com/lastjung/target_finder', '_blank')"
+              class="group relative glass p-8 rounded-2xl hover:border-indigo-500/50 transition-all border border-white/5 overflow-hidden flex flex-col justify-between h-full cursor-pointer"
+              onclick="
+                window.open(
+                  'https://github.com/lastjung/target_finder',
+                  '_blank',
+                )
+              "
             >
               <div
                 class="absolute -right-20 -top-20 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl group-hover:bg-indigo-500/20 transition-all"
@@ -280,12 +356,14 @@
                   A data discovery tool that uncovers hidden trends and insights
                   by combining YouTube API and AI.
                 </p>
-                <div class="flex justify-between items-center pt-8 border-t border-white/5">
+                <div
+                  class="flex justify-between items-center pt-8 border-t border-white/5"
+                >
                   <div class="flex gap-4">
                     <a
                       href="https://github.com/lastjung/target_finder"
                       target="_blank"
-                      onclick="event.stopPropagation();"
+                      onclick="event.stopPropagation()"
                       class="text-[10px] uppercase font-bold tracking-widest text-indigo-400 hover:text-white transition-colors"
                       >Github ↗</a
                     >
@@ -298,9 +376,11 @@
             </div>
 
             <!-- Project Card 3: Lotto Oracle -->
-            <div 
-              class="break-inside-avoid group relative glass p-8 rounded-2xl hover:border-purple-500/50 transition-all border border-white/5 overflow-hidden flex flex-col justify-between h-[450px] cursor-pointer"
-              onclick="window.open('https://lotto-ai-pro.vercel.app/', '_blank')"
+            <div
+              class="group relative glass p-8 rounded-2xl hover:border-purple-500/50 transition-all border border-white/5 overflow-hidden flex flex-col justify-between h-full cursor-pointer"
+              onclick="
+                window.open('https://lotto-ai-pro.vercel.app/', '_blank')
+              "
             >
               <div
                 class="absolute -right-20 -top-20 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl group-hover:bg-purple-500/20 transition-all"
@@ -316,19 +396,21 @@
                   architectures. Supports global systems for the US, Canada,
                   Japan, and South Korea.
                 </p>
-                <div class="flex justify-between items-center pt-8 border-t border-white/5">
+                <div
+                  class="flex justify-between items-center pt-8 border-t border-white/5"
+                >
                   <div class="flex gap-4">
                     <a
                       href="https://lotto-ai-pro.vercel.app/"
                       target="_blank"
-                      onclick="event.stopPropagation();"
+                      onclick="event.stopPropagation()"
                       class="text-[10px] uppercase font-bold tracking-widest text-purple-400 hover:text-white transition-colors"
                       >Live Demo ↗</a
                     >
                     <a
                       href="https://github.com/lastjung/lotto-oracle"
                       target="_blank"
-                      onclick="event.stopPropagation();"
+                      onclick="event.stopPropagation()"
                       class="text-[10px] uppercase font-bold tracking-widest text-purple-400 hover:text-white transition-colors"
                       >Github ↗</a
                     >
@@ -358,8 +440,8 @@
               Creative Lab.
             </h2>
             <p class="max-w-2xl mx-auto text-white/50 text-sm italic">
-              "Harmony of mathematical art and WebGL. Exploring the boundaries of
-              interactive graphics with AI."
+              "Harmony of mathematical art and WebGL. Exploring the boundaries
+              of interactive graphics with AI."
             </p>
           </div>
 
@@ -367,15 +449,19 @@
             <!-- Project Item 1 (Aurora) -->
             <div
               class="bg-white/[0.03] p-8 rounded-2xl border border-white/10 hover:border-purple-500/50 hover:bg-white/[0.07] transition-all group flex flex-col justify-between h-72 cursor-pointer relative overflow-hidden shadow-2xl"
-              onclick="window.open('https://lastjung.github.io/openai_experience/aurora-fluid-webgl/')"
+              onclick="
+                window.open(
+                  'https://lastjung.github.io/openai_experience/aurora-fluid-webgl/',
+                )
+              "
             >
               <!-- Inner Top Highlight -->
-              <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
-              
+              <div
+                class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"
+              ></div>
+
               <div class="space-y-6">
-                <div
-                  class="w-12 h-1.5 bg-purple-500 rounded-full"
-                ></div>
+                <div class="w-12 h-1.5 bg-purple-500 rounded-full"></div>
                 <h4
                   class="font-space font-bold text-2xl leading-tight group-hover:text-purple-400 transition-colors"
                 >
@@ -393,14 +479,18 @@
             <!-- Project Item 2 (Velvet) -->
             <div
               class="bg-white/[0.03] p-8 rounded-2xl border border-white/10 hover:border-pink-500/50 hover:bg-white/[0.07] transition-all group flex flex-col justify-between h-72 cursor-pointer relative overflow-hidden shadow-2xl"
-              onclick="window.open('https://lastjung.github.io/openai_experience/velvet-cloth/')"
+              onclick="
+                window.open(
+                  'https://lastjung.github.io/openai_experience/velvet-cloth/',
+                )
+              "
             >
-              <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
-              
+              <div
+                class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"
+              ></div>
+
               <div class="space-y-6">
-                <div
-                  class="w-12 h-1.5 bg-pink-500 rounded-full"
-                ></div>
+                <div class="w-12 h-1.5 bg-pink-500 rounded-full"></div>
                 <h4
                   class="font-space font-bold text-2xl leading-tight group-hover:text-pink-400 transition-colors"
                 >
@@ -418,14 +508,18 @@
             <!-- Project Item 3 (Cyber Globe) -->
             <div
               class="bg-white/[0.03] p-8 rounded-2xl border border-white/10 hover:border-cyan-500/50 hover:bg-white/[0.07] transition-all group flex flex-col justify-between h-72 cursor-pointer relative overflow-hidden shadow-2xl"
-              onclick="window.open('https://lastjung.github.io/openai_experience/cyber-hud/index.html')"
+              onclick="
+                window.open(
+                  'https://lastjung.github.io/openai_experience/cyber-hud/index.html',
+                )
+              "
             >
-              <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
-              
+              <div
+                class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"
+              ></div>
+
               <div class="space-y-6">
-                <div
-                  class="w-12 h-1.5 bg-cyan-500 rounded-full"
-                ></div>
+                <div class="w-12 h-1.5 bg-cyan-500 rounded-full"></div>
                 <h4
                   class="font-space font-bold text-2xl leading-tight group-hover:text-cyan-400 transition-colors"
                 >
@@ -443,14 +537,18 @@
             <!-- Project Item 4 (Slime) -->
             <div
               class="bg-white/[0.03] p-8 rounded-2xl border border-white/10 hover:border-green-500/50 hover:bg-white/[0.07] transition-all group flex flex-col justify-between h-72 cursor-pointer relative overflow-hidden shadow-2xl"
-              onclick="window.open('https://lastjung.github.io/openai_experience/neon-slime/')"
+              onclick="
+                window.open(
+                  'https://lastjung.github.io/openai_experience/neon-slime/',
+                )
+              "
             >
-              <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
-              
+              <div
+                class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"
+              ></div>
+
               <div class="space-y-6">
-                <div
-                  class="w-12 h-1.5 bg-green-500 rounded-full"
-                ></div>
+                <div class="w-12 h-1.5 bg-green-500 rounded-full"></div>
                 <h4
                   class="font-space font-bold text-2xl leading-tight group-hover:text-green-400 transition-colors"
                 >
@@ -471,12 +569,12 @@
               class="bg-white/[0.03] p-8 rounded-2xl border border-white/10 hover:border-blue-500/50 hover:bg-white/[0.07] transition-all group flex flex-col justify-between h-72 cursor-pointer relative overflow-hidden shadow-2xl"
               onclick="window.open('https://church-oakville.vercel.app/')"
             >
-              <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
-              
+              <div
+                class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"
+              ></div>
+
               <div class="space-y-6">
-                <div
-                  class="w-12 h-1.5 bg-blue-500 rounded-full"
-                ></div>
+                <div class="w-12 h-1.5 bg-blue-500 rounded-full"></div>
                 <h4
                   class="font-space font-bold text-2xl leading-tight group-hover:text-blue-400 transition-colors"
                 >
@@ -494,14 +592,18 @@
             <!-- Project Item 6 (Canvas Fluid) -->
             <div
               class="bg-white/[0.03] p-8 rounded-2xl border border-white/10 hover:border-cyan-400/50 hover:bg-white/[0.07] transition-all group flex flex-col justify-between h-72 cursor-pointer relative overflow-hidden shadow-2xl"
-              onclick="window.open('https://lastjung.github.io/openai_experience/canvas-fluid/index.html')"
+              onclick="
+                window.open(
+                  'https://lastjung.github.io/openai_experience/canvas-fluid/index.html',
+                )
+              "
             >
-              <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
-              
+              <div
+                class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"
+              ></div>
+
               <div class="space-y-6">
-                <div
-                  class="w-12 h-1.5 bg-cyan-400 rounded-full"
-                ></div>
+                <div class="w-12 h-1.5 bg-cyan-400 rounded-full"></div>
                 <h4
                   class="font-space font-bold text-2xl leading-tight group-hover:text-cyan-400 transition-colors"
                 >
@@ -519,14 +621,18 @@
             <!-- Project Item 7 (GLSL Kaleidoscope) -->
             <div
               class="bg-white/[0.03] p-8 rounded-2xl border border-white/10 hover:border-indigo-400/50 hover:bg-white/[0.07] transition-all group flex flex-col justify-between h-72 cursor-pointer relative overflow-hidden shadow-2xl"
-              onclick="window.open('https://lastjung.github.io/openai_experience/glsl-kaleidoscope/index.html')"
+              onclick="
+                window.open(
+                  'https://lastjung.github.io/openai_experience/glsl-kaleidoscope/index.html',
+                )
+              "
             >
-              <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
-              
+              <div
+                class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"
+              ></div>
+
               <div class="space-y-6">
-                <div
-                  class="w-12 h-1.5 bg-indigo-400 rounded-full"
-                ></div>
+                <div class="w-12 h-1.5 bg-indigo-400 rounded-full"></div>
                 <h4
                   class="font-space font-bold text-2xl leading-tight group-hover:text-indigo-400 transition-colors"
                 >
@@ -544,14 +650,18 @@
             <!-- Project Item 8 (Agency Landing) -->
             <div
               class="bg-white/[0.03] p-8 rounded-2xl border border-white/10 hover:border-white/50 hover:bg-white/[0.07] transition-all group flex flex-col justify-between h-72 cursor-pointer relative overflow-hidden shadow-2xl"
-              onclick="window.open('https://lastjung.github.io/openai_experience/agency-landing/index.html')"
+              onclick="
+                window.open(
+                  'https://lastjung.github.io/openai_experience/agency-landing/index.html',
+                )
+              "
             >
-              <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
-              
+              <div
+                class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"
+              ></div>
+
               <div class="space-y-6">
-                <div
-                  class="w-12 h-1.5 bg-white/40 rounded-full"
-                ></div>
+                <div class="w-12 h-1.5 bg-white/40 rounded-full"></div>
                 <h4
                   class="font-space font-bold text-2xl leading-tight group-hover:text-white transition-colors"
                 >
@@ -586,533 +696,1321 @@
         class="py-32 px-8 min-h-screen flex justify-center items-center"
       >
         <div class="max-w-7xl w-full">
-          <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-12">
+          <div
+            class="flex flex-col md:flex-row justify-between items-end mb-16 gap-12"
+          >
             <div class="space-y-4">
-              <span class="text-indigo-500 font-bold text-xs tracking-[0.5em] uppercase">Mathematical Foundations</span>
-              <h2 class="text-5xl md:text-7xl font-space font-bold leading-tight">Math & Visuals.</h2>
+              <span
+                class="text-indigo-500 font-bold text-xs tracking-[0.5em] uppercase"
+                >Mathematical Foundations</span
+              >
+              <h2
+                class="text-5xl md:text-7xl font-space font-bold leading-tight"
+              >
+                Math & Visuals.
+              </h2>
             </div>
             <div class="max-w-xl space-y-6">
               <div class="group cursor-default">
-                <h4 class="font-space text-indigo-400 text-[10px] font-bold uppercase tracking-widest mb-1">Discrete Fourier Transform</h4>
-                <p class="text-white/50 text-xs leading-relaxed border-l border-white/10 pl-4 group-hover:border-indigo-500 transition-all">
-                  All signals are the sum of simple vibrations. Visualize and analyze complex data using Fourier series.
+                <h4
+                  class="font-space text-indigo-400 text-[10px] font-bold uppercase tracking-widest mb-1"
+                >
+                  Discrete Fourier Transform
+                </h4>
+                <p
+                  class="text-white/50 text-xs leading-relaxed border-l border-white/10 pl-4 group-hover:border-indigo-500 transition-all"
+                >
+                  All signals are the sum of simple vibrations. Visualize and
+                  analyze complex data using Fourier series.
                 </p>
               </div>
               <div class="group cursor-default">
-                <h4 class="font-space text-cyan-400 text-[10px] font-bold uppercase tracking-widest mb-1">Algorithm Benchmark</h4>
-                <p class="text-white/50 text-xs leading-relaxed border-l border-white/10 pl-4 group-hover:border-cyan-500 transition-all">
-                  Designed to intuitively understand algorithm efficiency through sorting visualization tools.
+                <h4
+                  class="font-space text-cyan-400 text-[10px] font-bold uppercase tracking-widest mb-1"
+                >
+                  Algorithm Benchmark
+                </h4>
+                <p
+                  class="text-white/50 text-xs leading-relaxed border-l border-white/10 pl-4 group-hover:border-cyan-500 transition-all"
+                >
+                  Designed to intuitively understand algorithm efficiency
+                  through sorting visualization tools.
                 </p>
               </div>
             </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- 2D Fourier Oracle Card -->
-            <div 
-              class="group relative glass p-8 rounded-2xl hover:border-indigo-500/50 transition-all border border-white/5 overflow-hidden flex flex-col justify-between cursor-pointer h-full"
-              onclick="window.open('https://lastjung.github.io/fourier/?mode=2d', '_blank')"
+            <!-- The Sound of Equations Card -->
+            <div
+              class="group relative glass p-8 rounded-2xl hover:border-pink-500/50 transition-all border border-white/5 overflow-hidden flex flex-col justify-between cursor-pointer h-full"
+              onclick="
+                window.open(
+                  'https://lastjung.github.io/math-visual/math-sound/',
+                  '_blank',
+                )
+              "
             >
               <div class="space-y-6">
-                <div class="w-full aspect-video bg-[#1a1a1a] rounded-xl border-[6px] border-[#333] relative shadow-2xl group-hover:border-indigo-500/50 transition-all overflow-hidden flex items-center justify-center">
+                <div
+                  class="w-full aspect-video bg-gradient-to-br from-pink-500/20 to-black rounded-xl border border-white/5 group-hover:border-pink-500/30 transition-all flex items-center justify-center relative overflow-hidden"
+                >
+                  <span
+                    class="font-space font-black text-4xl text-pink-500 shadow-neon z-10"
+                    >SOUND</span
+                  >
+                  <div class="absolute inset-0 opacity-20 pointer-events-none">
+                    <div
+                      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 border-4 border-pink-600 rounded-full animate-pulse"
+                    ></div>
+                  </div>
+                </div>
+                <h3 class="text-2xl font-space font-bold">
+                  The Sound of Equations
+                </h3>
+                <p class="text-white/60 text-sm leading-relaxed">
+                  Experience mathematics through sound. A live mixer visualizing
+                  the audio spectrum of mathematical functions.
+                </p>
+              </div>
+              <div
+                class="flex justify-between items-center pt-8 border-t border-white/5"
+              >
+                <div class="flex gap-4">
+                  <a
+                    href="https://lastjung.github.io/math-visual/math-sound/"
+                    target="_blank"
+                    onclick="event.stopPropagation()"
+                    class="text-[10px] uppercase font-bold tracking-widest text-pink-400 hover:text-white transition-colors"
+                    >Live ↗</a
+                  >
+                </div>
+                <span class="text-[9px] text-white/20 font-bold"
+                  >#Math #Sound #Viz</span
+                >
+              </div>
+            </div>
+            <!-- The Sound of Polygons Card -->
+            <div
+              class="group relative glass p-8 rounded-2xl hover:border-violet-500/50 transition-all border border-white/5 overflow-hidden flex flex-col justify-between cursor-pointer h-full"
+              onclick="
+                window.open(
+                  'https://lastjung.github.io/math-visual/polygon-sound/',
+                  '_blank',
+                )
+              "
+            >
+              <div class="space-y-6">
+                <div
+                  class="w-full aspect-video bg-gradient-to-br from-violet-500/20 to-black rounded-xl border border-white/5 group-hover:border-violet-500/30 transition-all flex items-center justify-center relative overflow-hidden"
+                >
+                  <span
+                    class="font-space font-black text-4xl text-violet-500 shadow-neon z-10"
+                    >POLYGON</span
+                  >
+                  <div class="absolute inset-0 opacity-20 pointer-events-none">
+                    <div
+                      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 border-4 border-violet-600 rotate-45 animate-spin-slow"
+                    ></div>
+                  </div>
+                </div>
+                <h3 class="text-2xl font-space font-bold">
+                  The Sound of Polygons
+                </h3>
+                <p class="text-white/60 text-sm leading-relaxed">
+                  Harmonic rhythm generator based on Euclidean geometry. Visualizing polyrhythms through rotating polygons.
+                </p>
+              </div>
+              <div
+                class="flex justify-between items-center pt-8 border-t border-white/5"
+              >
+                <div class="flex gap-4">
+                  <a
+                    href="https://lastjung.github.io/math-visual/polygon-sound/"
+                    target="_blank"
+                    onclick="event.stopPropagation()"
+                    class="text-[10px] uppercase font-bold tracking-widest text-violet-400 hover:text-white transition-colors"
+                    >Live ↗</a
+                  >
+                </div>
+                <span class="text-[9px] text-white/20 font-bold"
+                  >#Geometry #Rhythm</span
+                >
+              </div>
+            </div>
+            <!-- Coding Math Visualizer Card -->
+            <div
+              class="group relative glass p-8 rounded-2xl hover:border-orange-500/50 transition-all border border-white/5 overflow-hidden flex flex-col justify-between cursor-pointer h-full"
+              onclick="
+                window.open(
+                  'https://lastjung.github.io/math-visual/visualization/',
+                  '_blank',
+                )
+              "
+            >
+              <div class="space-y-6">
+                <div
+                  class="w-full aspect-video bg-gradient-to-br from-orange-500/20 to-black rounded-xl border border-white/5 group-hover:border-orange-500/30 transition-all flex items-center justify-center relative overflow-hidden"
+                >
+                  <span
+                    class="font-space font-black text-4xl text-orange-500 shadow-neon z-10"
+                    >VISUAL</span
+                  >
+                  <div class="absolute inset-0 opacity-20 pointer-events-none">
+                    <div
+                      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 border-4 border-orange-600 rounded-full animate-pulse"
+                    ></div>
+                    <div
+                      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 border-2 border-orange-400 rounded-full animate-ping"
+                    ></div>
+                  </div>
+                </div>
+                <h3 class="text-2xl font-space font-bold">
+                  Coding Math Visualizer
+                </h3>
+                <p class="text-white/60 text-sm leading-relaxed">
+                  Interactive mathematical art inspired by Brilliant. Exploring concepts like Fibonacci Spirals and Golden Ratios.
+                </p>
+              </div>
+              <div
+                class="flex justify-between items-center pt-8 border-t border-white/5"
+              >
+                <div class="flex gap-4">
+                  <a
+                    href="https://lastjung.github.io/math-visual/visualization/"
+                    target="_blank"
+                    onclick="event.stopPropagation()"
+                    class="text-[10px] uppercase font-bold tracking-widest text-orange-400 hover:text-white transition-colors"
+                    >Live ↗</a
+                  >
+                </div>
+                <span class="text-[9px] text-white/20 font-bold"
+                  >#Math #Art #Brilliant</span
+                >
+              </div>
+            </div>
+            <!-- Sort Easy Card -->
+            <div
+              class="group relative glass p-8 rounded-2xl hover:border-cyan-500/50 transition-all border border-white/5 overflow-hidden flex flex-col justify-between cursor-pointer h-full"
+              onclick="window.open('https://github.com/lastjung/sort-easy', '_blank')"
+            >
+              <div class="space-y-6">
+                <div
+                  class="w-full aspect-video bg-gradient-to-br from-cyan-500/20 to-black rounded-xl border border-white/5 group-hover:border-cyan-500/30 transition-all flex items-center justify-center relative overflow-hidden"
+                >
+                  <span
+                    class="font-space font-black text-4xl text-cyan-500 shadow-neon z-10"
+                    >SORT</span
+                  >
+                  <div class="absolute inset-0 opacity-20 pointer-events-none">
+                    <div class="flex gap-1 items-end justify-center h-full pb-8">
+                       <div class="w-2 h-8 bg-cyan-500/50 animate-pulse"></div>
+                       <div class="w-2 h-16 bg-cyan-500/50 animate-pulse" style="animation-delay: 0.1s"></div>
+                       <div class="w-2 h-12 bg-cyan-500/50 animate-pulse" style="animation-delay: 0.2s"></div>
+                       <div class="w-2 h-24 bg-cyan-500/50 animate-pulse" style="animation-delay: 0.3s"></div>
+                       <div class="w-2 h-4 bg-cyan-500/50 animate-pulse" style="animation-delay: 0.4s"></div>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="text-2xl font-space font-bold">Sort Easy</h3>
+                <p class="text-white/60 text-sm leading-relaxed">
+                  Simple and intuitive sorting algorithm visualizer. Understand the logic behind sorting with step-by-step animations.
+                </p>
+              </div>
+              <div
+                class="flex justify-between items-center pt-8 border-t border-white/5"
+              >
+                <div class="flex gap-4">
+                  <a
+                    href="https://github.com/lastjung/sort-easy"
+                    target="_blank"
+                    onclick="event.stopPropagation()"
+                    class="text-[10px] uppercase font-bold tracking-widest text-cyan-400 hover:text-white transition-colors"
+                    >Github ↗</a
+                  >
+                </div>
+                <span class="text-[9px] text-white/20 font-bold"
+                  >#Sort #Algo #Education</span
+                >
+              </div>
+            </div>
+            <!-- Magic Sudoku Card -->
+            <div
+              class="group relative glass p-8 rounded-2xl hover:border-blue-500/50 transition-all border border-white/5 overflow-hidden flex flex-col justify-between cursor-pointer h-full"
+              onclick="
+                window.open(
+                  'https://lastjung.github.io/magic-sudoku/magic',
+                  '_blank',
+                )
+              "
+            >
+              <div class="space-y-6">
+                <div
+                  class="w-full aspect-video bg-gradient-to-br from-blue-500/20 to-black rounded-xl border border-white/5 group-hover:border-blue-500/30 transition-all flex items-center justify-center relative overflow-hidden"
+                >
+                  <span
+                    class="font-space font-black text-4xl text-blue-500 shadow-neon z-10"
+                    >SUDOKU</span
+                  >
+                  <div class="absolute inset-0 opacity-20 pointer-events-none">
+                    <div class="grid grid-cols-3 gap-1 w-24 h-24 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-12">
+                       <div class="bg-blue-500/40 rounded-sm animate-pulse"></div>
+                       <div class="bg-blue-500/20 rounded-sm"></div>
+                       <div class="bg-blue-500/40 rounded-sm animate-pulse" style="animation-delay: 0.1s"></div>
+                       <div class="bg-blue-500/20 rounded-sm"></div>
+                       <div class="bg-blue-500/60 rounded-sm shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
+                       <div class="bg-blue-500/20 rounded-sm"></div>
+                       <div class="bg-blue-500/40 rounded-sm animate-pulse" style="animation-delay: 0.2s"></div>
+                       <div class="bg-blue-500/20 rounded-sm"></div>
+                       <div class="bg-blue-500/40 rounded-sm animate-pulse" style="animation-delay: 0.3s"></div>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="text-2xl font-space font-bold">Magic Sudoku</h3>
+                <p class="text-white/60 text-sm leading-relaxed">
+                  Advanced Sudoku solver and generator focusing on Magic Square constraints. Explore the logic of numbers.
+                </p>
+              </div>
+              <div
+                class="flex justify-between items-center pt-8 border-t border-white/5"
+              >
+                <div class="flex gap-4">
+                  <a
+                    href="https://lastjung.github.io/magic-sudoku/magic"
+                    target="_blank"
+                    onclick="event.stopPropagation()"
+                    class="text-[10px] uppercase font-bold tracking-widest text-blue-400 hover:text-white transition-colors"
+                    >Live ↗</a
+                  >
+                </div>
+                <span class="text-[9px] text-white/20 font-bold"
+                  >#Logic #Puzzle #MagicSquare</span
+                >
+              </div>
+            </div>
+            <!-- Classic Sudoku Card -->
+            <div
+              class="group relative glass p-8 rounded-2xl hover:border-slate-500/50 transition-all border border-white/5 overflow-hidden flex flex-col justify-between cursor-pointer h-full"
+              onclick="
+                window.open(
+                  'https://lastjung.github.io/magic-sudoku/sudoku',
+                  '_blank',
+                )
+              "
+            >
+              <div class="space-y-6">
+                <div
+                  class="w-full aspect-video bg-gradient-to-br from-slate-500/20 to-black rounded-xl border border-white/5 group-hover:border-slate-500/30 transition-all flex items-center justify-center relative overflow-hidden"
+                >
+                  <span
+                    class="font-space font-black text-4xl text-slate-500 shadow-neon z-10"
+                    >CLASSIC</span
+                  >
+                  <div class="absolute inset-0 opacity-20 pointer-events-none">
+                    <div class="grid grid-cols-3 gap-0.5 w-full h-full p-8 opacity-30">
+                       <div class="border border-slate-500/50"></div> <div class="border border-slate-500/50"></div> <div class="border border-slate-500/50"></div>
+                       <div class="border border-slate-500/50"></div> <div class="border border-slate-500/50 bg-slate-500/20"></div> <div class="border border-slate-500/50"></div>
+                       <div class="border border-slate-500/50"></div> <div class="border border-slate-500/50"></div> <div class="border border-slate-500/50"></div>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="text-2xl font-space font-bold">Classic Sudoku</h3>
+                <p class="text-white/60 text-sm leading-relaxed">
+                  Traditional Sudoku experience with clean interface and pure logic. Master the basics of grid puzzles.
+                </p>
+              </div>
+              <div
+                class="flex justify-between items-center pt-8 border-t border-white/5"
+              >
+                <div class="flex gap-4">
+                  <a
+                    href="https://lastjung.github.io/magic-sudoku/sudoku"
+                    target="_blank"
+                    onclick="event.stopPropagation()"
+                    class="text-[10px] uppercase font-bold tracking-widest text-slate-400 hover:text-white transition-colors"
+                    >Live ↗</a
+                  >
+                </div>
+                <span class="text-[9px] text-white/20 font-bold"
+                  >#Classic #Logic #Mind</span
+                >
+              </div>
+            </div>
+            <!-- Langton's Ant Card -->
+            <div
+              class="group relative glass p-8 rounded-2xl hover:border-red-500/50 transition-all border border-white/5 overflow-hidden flex flex-col justify-between cursor-pointer h-full"
+              onclick="
+                window.open(
+                  'https://lastjung.github.io/langton-ant/',
+                  '_blank',
+                )
+              "
+            >
+              <div class="space-y-6">
+                <div
+                  class="w-full aspect-video bg-gradient-to-br from-red-500/20 to-black rounded-xl border border-white/5 group-hover:border-red-500/30 transition-all flex items-center justify-center relative overflow-hidden"
+                >
+                  <span
+                    class="font-space font-black text-4xl text-red-500 shadow-neon z-10"
+                    >ANT</span
+                  >
+                  <div class="absolute inset-0 opacity-20 pointer-events-none">
+                    <div class="grid grid-cols-5 gap-0.5 w-full h-full p-6 animate-pulse">
+                       <div class="bg-red-500/10"></div><div class="bg-red-500/10"></div><div class="bg-red-500/10"></div><div class="bg-red-500/40"></div><div class="bg-red-500/10"></div>
+                       <div class="bg-red-500/10"></div><div class="bg-red-500/40"></div><div class="bg-red-500/10"></div><div class="bg-red-500/10"></div><div class="bg-red-500/10"></div>
+                       <div class="bg-red-500/10"></div><div class="bg-red-500/10"></div><div class="bg-red-500/60 shadow-[0_0_10px_rgba(239,68,68,0.5)]"></div><div class="bg-red-500/10"></div><div class="bg-red-500/10"></div>
+                       <div class="bg-red-500/10"></div><div class="bg-red-500/10"></div><div class="bg-red-500/10"></div><div class="bg-red-500/40"></div><div class="bg-red-500/10"></div>
+                       <div class="bg-red-500/10"></div><div class="bg-red-500/40"></div><div class="bg-red-500/10"></div><div class="bg-red-500/10"></div><div class="bg-red-500/10"></div>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="text-2xl font-space font-bold">Langton's Ant</h3>
+                <p class="text-white/60 text-sm leading-relaxed">
+                  Cellular automaton simulation. Watch emergent order arise from simple chaotic rules.
+                </p>
+              </div>
+              <div
+                class="flex justify-between items-center pt-8 border-t border-white/5"
+              >
+                <div class="flex gap-4">
+                  <a
+                    href="https://lastjung.github.io/langton-ant/"
+                    target="_blank"
+                    onclick="event.stopPropagation()"
+                    class="text-[10px] uppercase font-bold tracking-widest text-red-400 hover:text-white transition-colors"
+                    >Live ↗</a
+                  >
+                  <a
+                    href="https://github.com/lastjung/langton-ant"
+                    target="_blank"
+                    onclick="event.stopPropagation()"
+                    class="text-[10px] uppercase font-bold tracking-widest text-red-400 hover:text-white transition-colors"
+                    >Github ↗</a
+                  >
+                </div>
+                <span class="text-[9px] text-white/20 font-bold"
+                  >#Automaton #Chaos #Rules</span
+                >
+              </div>
+            </div>
+            <!-- 2D Fourier Oracle Card -->
+            <div
+              class="group relative glass p-8 rounded-2xl hover:border-indigo-500/50 transition-all border border-white/5 overflow-hidden flex flex-col justify-between cursor-pointer h-full"
+              onclick="
+                window.open(
+                  'https://lastjung.github.io/fourier/?mode=2d',
+                  '_blank',
+                )
+              "
+            >
+              <div class="space-y-6">
+                <div
+                  class="w-full aspect-video bg-[#1a1a1a] rounded-xl border-[6px] border-[#333] relative shadow-2xl group-hover:border-indigo-500/50 transition-all overflow-hidden flex items-center justify-center"
+                >
                   <!-- Bezel Dot -->
-                  <div class="absolute top-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-white/20 rounded-full"></div>
-                  <img src="assets/fourier-2d-custom.png" alt="2D Fourier Oracle" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+                  <div
+                    class="absolute top-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-white/20 rounded-full"
+                  ></div>
+                  <img
+                    src="assets/fourier-2d-custom.png"
+                    alt="2D Fourier Oracle"
+                    class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                  />
                 </div>
                 <h3 class="text-2xl font-space font-bold">2D Fourier Oracle</h3>
-                <p class="text-white/60 text-sm leading-relaxed">Mathematical visualization of complex waveforms using Discrete Fourier Transform. Discover the hidden frequencies.</p>
+                <p class="text-white/60 text-sm leading-relaxed">
+                  Mathematical visualization of complex waveforms using Discrete
+                  Fourier Transform. Discover the hidden frequencies.
+                </p>
               </div>
-              <div class="flex justify-between items-center pt-8 border-t border-white/5">
+              <div
+                class="flex justify-between items-center pt-8 border-t border-white/5"
+              >
                 <div class="flex gap-4">
-                  <a href="https://lastjung.github.io/fourier/?mode=2d" target="_blank" onclick="event.stopPropagation();" class="text-[10px] uppercase font-bold tracking-widest text-indigo-400 hover:text-white transition-colors">Live ↗</a>
-                  <a href="https://github.com/lastjung/fourier" target="_blank" onclick="event.stopPropagation();" class="text-[10px] uppercase font-bold tracking-widest text-indigo-400 hover:text-white transition-colors">Github ↗</a>
+                  <a
+                    href="https://lastjung.github.io/fourier/?mode=2d"
+                    target="_blank"
+                    onclick="event.stopPropagation()"
+                    class="text-[10px] uppercase font-bold tracking-widest text-indigo-400 hover:text-white transition-colors"
+                    >Live ↗</a
+                  >
+                  <a
+                    href="https://github.com/lastjung/fourier"
+                    target="_blank"
+                    onclick="event.stopPropagation()"
+                    class="text-[10px] uppercase font-bold tracking-widest text-indigo-400 hover:text-white transition-colors"
+                    >Github ↗</a
+                  >
                 </div>
-                <span class="text-[9px] text-white/20 font-bold">#DFT #MathArt</span>
+                <span class="text-[9px] text-white/20 font-bold"
+                  >#DFT #MathArt</span
+                >
               </div>
             </div>
 
             <!-- 3D Fourier Space Card -->
-            <div 
+            <div
               class="group relative glass p-8 rounded-2xl hover:border-cyan-500/50 transition-all border border-white/5 overflow-hidden flex flex-col justify-between cursor-pointer h-full"
-              onclick="window.open('https://lastjung.github.io/fourier/?mode=3d', '_blank')"
+              onclick="
+                window.open(
+                  'https://lastjung.github.io/fourier/?mode=3d',
+                  '_blank',
+                )
+              "
             >
               <div class="space-y-6">
-                <div class="w-full aspect-video bg-[#1a1a1a] rounded-xl border-[6px] border-[#333] relative shadow-2xl group-hover:border-cyan-500/50 transition-all overflow-hidden flex items-center justify-center">
+                <div
+                  class="w-full aspect-video bg-[#1a1a1a] rounded-xl border-[6px] border-[#333] relative shadow-2xl group-hover:border-cyan-500/50 transition-all overflow-hidden flex items-center justify-center"
+                >
                   <!-- Bezel Dot -->
-                  <div class="absolute top-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-white/20 rounded-full"></div>
-                  <img src="assets/fourier-3d-custom.png" alt="3D Fourier Space" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+                  <div
+                    class="absolute top-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-white/20 rounded-full"
+                  ></div>
+                  <img
+                    src="assets/fourier-3d-custom.png"
+                    alt="3D Fourier Space"
+                    class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                  />
                 </div>
                 <h3 class="text-2xl font-space font-bold">3D Fourier Space</h3>
-                <p class="text-white/60 text-sm leading-relaxed">Multi-instance harmonic synthesis exploring frequency dimensions in 3D space. Immersive mathematical experience.</p>
+                <p class="text-white/60 text-sm leading-relaxed">
+                  Multi-instance harmonic synthesis exploring frequency
+                  dimensions in 3D space. Immersive mathematical experience.
+                </p>
               </div>
-              <div class="flex justify-between items-center pt-8 border-t border-white/5">
+              <div
+                class="flex justify-between items-center pt-8 border-t border-white/5"
+              >
                 <div class="flex gap-4">
-                  <a href="https://lastjung.github.io/fourier/?mode=3d" target="_blank" onclick="event.stopPropagation();" class="text-[10px] uppercase font-bold tracking-widest text-cyan-400 hover:text-white transition-colors">Live ↗</a>
-                  <a href="https://github.com/lastjung/fourier" target="_blank" onclick="event.stopPropagation();" class="text-[10px] uppercase font-bold tracking-widest text-cyan-400 hover:text-white transition-colors">Github ↗</a>
+                  <a
+                    href="https://lastjung.github.io/fourier/?mode=3d"
+                    target="_blank"
+                    onclick="event.stopPropagation()"
+                    class="text-[10px] uppercase font-bold tracking-widest text-cyan-400 hover:text-white transition-colors"
+                    >Live ↗</a
+                  >
+                  <a
+                    href="https://github.com/lastjung/fourier"
+                    target="_blank"
+                    onclick="event.stopPropagation()"
+                    class="text-[10px] uppercase font-bold tracking-widest text-cyan-400 hover:text-white transition-colors"
+                    >Github ↗</a
+                  >
                 </div>
-                <span class="text-[9px] text-white/20 font-bold">#ThreeJS #Space</span>
+                <span class="text-[9px] text-white/20 font-bold"
+                  >#ThreeJS #Space</span
+                >
               </div>
             </div>
 
             <!-- Ant Pheromone Card -->
-            <div 
+            <div
               class="group relative glass p-8 rounded-2xl hover:border-purple-500/50 transition-all border border-white/5 overflow-hidden flex flex-col justify-between cursor-pointer h-full"
-              onclick="window.open('https://lastjung.github.io/openai_experience/ant-pheromone/index.html', '_blank')"
+              onclick="
+                window.open(
+                  'https://lastjung.github.io/openai_experience/ant-pheromone/index.html',
+                  '_blank',
+                )
+              "
             >
               <div class="space-y-6">
-                <div class="w-full aspect-video bg-[#1a1a1a] rounded-xl border-[6px] border-[#333] relative shadow-2xl group-hover:border-purple-500/50 transition-all overflow-hidden flex items-center justify-center">
+                <div
+                  class="w-full aspect-video bg-[#1a1a1a] rounded-xl border-[6px] border-[#333] relative shadow-2xl group-hover:border-purple-500/50 transition-all overflow-hidden flex items-center justify-center"
+                >
                   <!-- Bezel Dot -->
-                  <div class="absolute top-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-white/20 rounded-full"></div>
-                  <img src="assets/ant-pheromone-custom.png" alt="Ant Pheromone" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+                  <div
+                    class="absolute top-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-white/20 rounded-full"
+                  ></div>
+                  <img
+                    src="assets/ant-pheromone-custom.png"
+                    alt="Ant Pheromone"
+                    class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                  />
                 </div>
                 <h3 class="text-2xl font-space font-bold">Ant Pheromone</h3>
-                <p class="text-white/60 text-sm leading-relaxed">Emergent swarm intelligence simulation. Highlighting the power of simple rule-based algorithms in collective data.</p>
+                <p class="text-white/60 text-sm leading-relaxed">
+                  Emergent swarm intelligence simulation. Highlighting the power
+                  of simple rule-based algorithms in collective data.
+                </p>
               </div>
-              <div class="flex justify-between items-center pt-8 border-t border-white/5">
+              <div
+                class="flex justify-between items-center pt-8 border-t border-white/5"
+              >
                 <div class="flex gap-4">
-                  <a href="https://lastjung.github.io/openai_experience/ant-pheromone/index.html" target="_blank" onclick="event.stopPropagation();" class="text-[10px] uppercase font-bold tracking-widest text-purple-400 hover:text-white transition-colors">Live ↗</a>
+                  <a
+                    href="https://lastjung.github.io/openai_experience/ant-pheromone/index.html"
+                    target="_blank"
+                    onclick="event.stopPropagation()"
+                    class="text-[10px] uppercase font-bold tracking-widest text-purple-400 hover:text-white transition-colors"
+                    >Live ↗</a
+                  >
                 </div>
-                <span class="text-[9px] text-white/20 font-bold">#SwarmAI #Simulation</span>
+                <span class="text-[9px] text-white/20 font-bold"
+                  >#SwarmAI #Simulation</span
+                >
               </div>
             </div>
 
             <!-- GPS Tracker Card -->
-            <div 
+            <div
               class="group relative glass p-8 rounded-2xl hover:border-cyan-400/50 transition-all border border-white/5 overflow-hidden flex flex-col justify-between cursor-pointer h-full"
-              onclick="window.open('https://lastjung.github.io/GPS-tracker/', '_blank')"
+              onclick="
+                window.open('https://lastjung.github.io/GPS-tracker/', '_blank')
+              "
             >
               <div class="space-y-6">
-                <div class="w-full aspect-video bg-[#1a1a1a] rounded-xl border-[6px] border-[#333] relative shadow-2xl group-hover:border-cyan-400/50 transition-all overflow-hidden flex items-center justify-center">
+                <div
+                  class="w-full aspect-video bg-[#1a1a1a] rounded-xl border-[6px] border-[#333] relative shadow-2xl group-hover:border-cyan-400/50 transition-all overflow-hidden flex items-center justify-center"
+                >
                   <!-- Bezel Dot -->
-                  <div class="absolute top-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-white/20 rounded-full"></div>
-                  <img src="assets/gps-tracker-custom.png" alt="GPS Tracker" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+                  <div
+                    class="absolute top-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-white/20 rounded-full"
+                  ></div>
+                  <img
+                    src="assets/gps-tracker-custom.png"
+                    alt="GPS Tracker"
+                    class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                  />
                 </div>
                 <h3 class="text-2xl font-space font-bold">GPS Tracker</h3>
-                <p class="text-white/60 text-sm leading-relaxed">Real-time path optimization and city grid visualization using A* Algorithm. Analyzing urban mobility across New York and Barcelona.</p>
+                <p class="text-white/60 text-sm leading-relaxed">
+                  Real-time path optimization and city grid visualization using
+                  A* Algorithm. Analyzing urban mobility across New York and
+                  Barcelona.
+                </p>
               </div>
-              <div class="flex justify-between items-center pt-8 border-t border-white/5">
+              <div
+                class="flex justify-between items-center pt-8 border-t border-white/5"
+              >
                 <div class="flex gap-4">
-                  <a href="https://lastjung.github.io/GPS-tracker/" target="_blank" onclick="event.stopPropagation();" class="text-[10px] uppercase font-bold tracking-widest text-cyan-400 hover:text-white transition-colors">Live ↗</a>
-                  <a href="https://github.com/lastjung/GPS-tracker" target="_blank" onclick="event.stopPropagation();" class="text-[10px] uppercase font-bold tracking-widest text-cyan-400 hover:text-white transition-colors">GitHub ↗</a>
+                  <a
+                    href="https://lastjung.github.io/GPS-tracker/"
+                    target="_blank"
+                    onclick="event.stopPropagation()"
+                    class="text-[10px] uppercase font-bold tracking-widest text-cyan-400 hover:text-white transition-colors"
+                    >Live ↗</a
+                  >
+                  <a
+                    href="https://github.com/lastjung/GPS-tracker"
+                    target="_blank"
+                    onclick="event.stopPropagation()"
+                    class="text-[10px] uppercase font-bold tracking-widest text-cyan-400 hover:text-white transition-colors"
+                    >GitHub ↗</a
+                  >
                 </div>
-                <span class="text-[9px] text-white/20 font-bold">#A*Algorithm #Mapping</span>
+                <span class="text-[9px] text-white/20 font-bold"
+                  >#A*Algorithm #Mapping</span
+                >
               </div>
             </div>
           </div>
         </div>
       </section>
 
-        <!-- Gaming & Interactive Section -->
-        <section id="gaming" class="py-32 px-8 min-h-screen flex justify-center items-center bg-black/30">
-            <div class="max-w-7xl w-full">
-                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
-                    <div class="space-y-4">
-                        <span class="text-green-500 font-bold text-xs tracking-[0.5em] uppercase">Interactive Entertainment</span>
-                        <h2 class="text-5xl md:text-7xl font-space font-bold leading-tight">Gaming.</h2>
-                    </div>
-                    <p class="max-w-md text-white/50 text-sm leading-relaxed mb-2">
-                        Where code meet creativity. 
-                        Interactive experiences powered by neon aesthetics and physics engines.
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project Card: Steampunk Wave Flight -->
-                    <div 
-                      class="group relative glass p-8 rounded-2xl hover:border-amber-500/50 transition-all border border-white/5 overflow-hidden flex flex-col justify-between cursor-pointer h-full"
-                      onclick="window.open('https://lastjung.github.io/wave-flight/', '_blank')"
-                    >
-                        <div class="space-y-6">
-                            <div class="w-full h-40 bg-gradient-to-br from-amber-500/20 to-black rounded-xl border border-white/5 group-hover:border-amber-500/30 transition-all flex items-center justify-center relative overflow-hidden">
-                                <span class="font-space font-black text-4xl text-amber-500 shadow-neon z-10">WAVE</span>
-                                <!-- Subtle steam effect or gears could be added here in the future -->
-                                <div class="absolute inset-0 opacity-20 pointer-events-none">
-                                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 border-4 border-amber-600 rounded-full animate-spin-slow"></div>
-                                </div>
-                            </div>
-                            <h3 class="text-2xl font-space font-bold">Steampunk Wave Flight</h3>
-                            <p class="text-white/60 text-sm leading-relaxed">Immersive 3D steampunk flight simulator with real-time terrain and adaptive Web Audio. Pilot a brass airship over a neon ocean.</p>
-                        </div>
-                        <div class="flex justify-between items-center pt-8 border-t border-white/5">
-                            <div class="flex gap-4">
-                              <a href="https://lastjung.github.io/wave-flight/" target="_blank" onclick="event.stopPropagation();" class="text-[10px] uppercase font-bold tracking-widest text-amber-400 hover:text-white transition-colors">Live ↗</a>
-                              <a href="https://github.com/lastjung/wave-flight" target="_blank" onclick="event.stopPropagation();" class="text-[10px] uppercase font-bold tracking-widest text-amber-400 hover:text-white transition-colors">Github ↗</a>
-                            </div>
-                            <span class="text-[9px] text-white/20 font-bold">#ThreeJS #WebAudio</span>
-                        </div>
-                    </div>
-                    <!-- Project Card: Brick Breaker -->
-                    <div 
-                      class="group relative glass p-8 rounded-2xl hover:border-green-500/50 transition-all border border-white/5 overflow-hidden flex flex-col justify-between cursor-pointer h-full"
-                      onclick="window.open('https://lastjung.github.io/brick_breaker/', '_blank')"
-                    >
-                        <div class="space-y-6">
-                            <div class="w-full h-40 bg-[#1a1a1a] rounded-xl border-[6px] border-[#333] relative shadow-2xl group-hover:border-green-500/50 transition-all overflow-hidden flex items-center justify-center">
-                                <!-- Bezel Dot -->
-                                <div class="absolute top-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-white/20 rounded-full"></div>
-                                <img src="assets/brick-breaker-custom.png" alt="Neon Brick Breaker" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
-                            </div>
-                            <h3 class="text-2xl font-space font-bold">Neon Brick Breaker</h3>
-                            <p class="text-white/60 text-sm leading-relaxed">A neon-themed brick breaker game created with "Vibe Coding". Modern vibes added to classic fun.</p>
-                        </div>
-                        <div class="flex justify-between items-center pt-8 border-t border-white/5">
-                            <div class="flex gap-4">
-                              <a href="https://lastjung.github.io/brick_breaker/" target="_blank" onclick="event.stopPropagation();" class="text-[10px] uppercase font-bold tracking-widest text-green-400 hover:text-white transition-colors">Live ↗</a>
-                              <a href="https://github.com/lastjung/brick_breaker" target="_blank" onclick="event.stopPropagation();" class="text-[10px] uppercase font-bold tracking-widest text-green-400 hover:text-white transition-colors">Github ↗</a>
-                            </div>
-                            <span class="text-[9px] text-white/20 font-bold">#GameJS</span>
-                        </div>
-                    </div>
-
-                    <!-- Project Card: Sort-Compare -->
-                    <div 
-                      class="group relative glass p-8 rounded-2xl hover:border-cyan-500/50 transition-all border border-white/5 overflow-hidden flex flex-col justify-between cursor-pointer h-full"
-                      onclick="window.open('https://lastjung.github.io/sort-compare/', '_blank')"
-                    >
-                        <div class="space-y-6">
-                            <div class="w-full h-40 bg-[#1a1a1a] rounded-xl border-[6px] border-[#333] relative shadow-2xl group-hover:border-cyan-500/50 transition-all overflow-hidden flex items-center justify-center">
-                                <!-- Bezel Dot -->
-                                <div class="absolute top-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-white/20 rounded-full"></div>
-                                <img src="assets/sort-compare-custom.png" alt="Sort Compare" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
-                            </div>
-                            <h3 class="text-2xl font-space font-bold">Sort-Compare</h3>
-                            <p class="text-white/60 text-sm leading-relaxed">Interactive visualization of various sorting algorithms side-by-side. Analyze efficiency with style.</p>
-                        </div>
-                        <div class="flex justify-between items-center pt-8 border-t border-white/5">
-                            <div class="flex gap-4">
-                              <a href="https://lastjung.github.io/sort-compare/" target="_blank" onclick="event.stopPropagation();" class="text-[10px] uppercase font-bold tracking-widest text-cyan-400 hover:text-white transition-colors">Live ↗</a>
-                              <a href="https://github.com/lastjung/sort-compare" target="_blank" onclick="event.stopPropagation();" class="text-[10px] uppercase font-bold tracking-widest text-cyan-400 hover:text-white transition-colors">Github ↗</a>
-                            </div>
-                            <span class="text-[9px] text-white/20 font-bold">#Algo</span>
-                        </div>
-                    </div>
-
-                    <!-- Project Card: Retro Flight -->
-                    <div 
-                      class="group relative glass p-8 rounded-2xl hover:border-orange-500/50 transition-all border border-white/5 overflow-hidden flex flex-col justify-between cursor-pointer h-full"
-                      onclick="window.open('https://lastjung.github.io/openai_experience/retro-wave-flight/index.html', '_blank')"
-                    >
-                        <div class="space-y-6">
-                            <div class="w-full h-40 bg-gradient-to-br from-orange-500/20 to-black rounded-xl border border-white/5 group-hover:border-orange-500/30 transition-all flex items-center justify-center">
-                                <span class="font-space font-black text-4xl text-orange-500 shadow-neon">FLY</span>
-                            </div>
-                            <h3 class="text-2xl font-space font-bold">Retro Flight</h3>
-                            <p class="text-white/60 text-sm leading-relaxed">Endless synthwave flight simulator. Explore procedural landscapes in an 80s-inspired retro-future.</p>
-                        </div>
-                        <div class="flex justify-between items-center pt-8 border-t border-white/5">
-                            <div class="flex gap-4">
-                              <a href="https://lastjung.github.io/openai_experience/retro-wave-flight/index.html" target="_blank" onclick="event.stopPropagation();" class="text-[10px] uppercase font-bold tracking-widest text-orange-400 hover:text-white transition-colors">Live ↗</a>
-                            </div>
-                            <span class="text-[9px] text-white/20 font-bold">#Retro</span>
-                        </div>
-                    </div>
-
-                    <!-- Project Card: Synth Shooter -->
-                    <div 
-                      class="group relative glass p-8 rounded-2xl hover:border-red-500/50 transition-all border border-white/5 overflow-hidden flex flex-col justify-between cursor-pointer h-full"
-                      onclick="window.open('https://lastjung.github.io/openai_experience/synthwave-shooter/index.html', '_blank')"
-                    >
-                        <div class="space-y-6">
-                            <div class="w-full h-40 bg-[#1a1a1a] rounded-xl border-[6px] border-[#333] relative shadow-2xl group-hover:border-red-500/50 transition-all overflow-hidden flex items-center justify-center">
-                                <!-- Bezel Dot -->
-                                <div class="absolute top-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-white/20 rounded-full"></div>
-                                <img src="assets/synthwave-shooter-custom.png" alt="Neon Shooter" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
-                            </div>
-                            <h3 class="text-2xl font-space font-bold">Neon Shooter</h3>
-                            <p class="text-white/60 text-sm leading-relaxed">High-energy synthwave rail shooter. Blast through enemies in a neon-drenched grid world.</p>
-                        </div>
-                        <div class="flex justify-between items-center pt-8 border-t border-white/5">
-                            <div class="flex gap-4">
-                              <a href="https://lastjung.github.io/openai_experience/synthwave-shooter/index.html" target="_blank" onclick="event.stopPropagation();" class="text-[10px] uppercase font-bold tracking-widest text-red-400 hover:text-white transition-colors">Live ↗</a>
-                            </div>
-                            <span class="text-[9px] text-white/20 font-bold">#Action</span>
-                        </div>
-                    </div>
-
-                    <!-- Project Card: Falling Sand -->
-                    <div 
-                      class="group relative glass p-8 rounded-2xl hover:border-yellow-500/50 transition-all border border-white/5 overflow-hidden flex flex-col justify-between cursor-pointer h-full"
-                      onclick="window.open('https://lastjung.github.io/openai_experience/falling-sand/index.html', '_blank')"
-                    >
-                        <div class="space-y-6">
-                            <div class="w-full h-40 bg-[#1a1a1a] rounded-xl border-[6px] border-[#333] relative shadow-2xl group-hover:border-yellow-500/50 transition-all overflow-hidden flex items-center justify-center">
-                                <!-- Bezel Dot -->
-                                <div class="absolute top-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-white/20 rounded-full"></div>
-                                <img src="assets/falling-sand-custom.png" alt="Falling Sand" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
-                            </div>
-                            <h3 class="text-2xl font-space font-bold">Falling Sand</h3>
-                            <p class="text-white/60 text-sm leading-relaxed">Particle physics sandbox. Experiment with elements, gravity, and chemical reactions in high-perf JS.</p>
-                        </div>
-                        <div class="flex justify-between items-center pt-8 border-t border-white/5">
-                            <div class="flex gap-4">
-                              <a href="https://lastjung.github.io/openai_experience/falling-sand/index.html" target="_blank" onclick="event.stopPropagation();" class="text-[10px] uppercase font-bold tracking-widest text-yellow-400 hover:text-white transition-colors">Live ↗</a>
-                            </div>
-                            <span class="text-[9px] text-white/20 font-bold">#Physics</span>
-                        </div>
-                    </div>
-                </div>
+      <!-- Gaming & Interactive Section -->
+      <section
+        id="gaming"
+        class="py-32 px-8 min-h-screen flex justify-center items-center bg-black/30"
+      >
+        <div class="max-w-7xl w-full">
+          <div
+            class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4"
+          >
+            <div class="space-y-4">
+              <span
+                class="text-green-500 font-bold text-xs tracking-[0.5em] uppercase"
+                >Interactive Entertainment</span
+              >
+              <h2
+                class="text-5xl md:text-7xl font-space font-bold leading-tight"
+              >
+                Gaming.
+              </h2>
             </div>
-        </section>
-
-        <!-- YouTube Section -->
-        <section id="youtube" class="py-32 px-8 min-h-screen flex justify-center items-center bg-gradient-to-b from-transparent to-red-950/30">
-            <div class="max-w-6xl w-full text-center space-y-24">
-                <div class="space-y-4">
-                    <span class="text-red-500 font-bold text-xs tracking-[0.5em] uppercase">Visonary Media</span>
-                    <h2 class="text-5xl md:text-8xl font-space font-black uppercase tracking-tighter">TRANS-LITE<br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">EXPERIENCE</span></h2>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div 
-                        class="break-inside-avoid group relative glass p-12 rounded-[2.5rem] space-y-10 hover:border-red-500/40 transition-all duration-500 border border-white/10 cursor-pointer"
-                        onclick="window.open('https://www.youtube.com/@TechPulse-w8z', '_blank')"
-                    >
-                        <div class="w-24 h-24 bg-red-500/10 rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:rotate-12 transition-transform">
-                            <svg class="w-12 h-12 text-red-500" fill="currentColor" viewBox="0 0 24 24"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 .61-.03 1.3-.1 2.1-.06.8-.15 1.43-.28 1.9-.13.47-.35.84-.66 1.12-.31.28-.71.48-1.19.6-.48.12-1.17.21-2.07.27C16.64 18.06 14.88 18 12.33 18l-1.33.01c-2.55 0-4.31-.06-5.3-.12-1-.06-1.69-.15-2.07-.27-.48-.12-.88-.32-1.19-.6a2.8 2.8 0 01-.66-1.12c-.13-.47-.22-1.1-.28-1.9a32.32 32.32 0 01-.1-2.1L1.4 12c0-.61.03-1.3.1-2.1l.28-1.9c.13-.47.35-.84.66-1.12.31-.28.71-.48 1.19-.6.48-.12 1.17-.21 2.07-.27C6.69 5.94 8.41 6 10.96 6l1.33-.01c2.55 0 4.31.06 5.3.12 1 .06 1.69.15 2.07.27.48.12.88.32 1.19.6.31.28.53.65.66 1.12z"/></svg>
-                        </div>
-                        <div class="space-y-4">
-                            <h3 class="text-3xl font-space font-bold uppercase">TechPulse</h3>
-                            <p class="text-white/40 text-sm leading-relaxed font-light">
-                                <span class="text-white font-bold opacity-100">"Visualize the Unseen"</span><br/>
-                                Insights into math, coding, and future tech. Bridging theory and implementation through high-quality motion graphics and code.
-                            </p>
-                        </div>
-                        <div class="pt-6">
-                            <span class="px-6 py-3 bg-red-500/10 border border-red-500/30 text-red-500 text-[10px] font-bold uppercase rounded-full tracking-[0.3em] group-hover:bg-red-500 group-hover:text-white transition-all">Visit Channel ↗</span>
-                        </div>
-                    </div>
-
-                    <div class="break-inside-avoid break-inside-avoid group relative glass p-12 rounded-[2.5rem] space-y-10 hover:border-orange-500/40 transition-all duration-500 border border-white/10">
-                        <div class="w-24 h-24 bg-orange-500/10 rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:-rotate-12 transition-transform">
-                            <svg class="w-12 h-12 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-                        </div>
-                        <div class="space-y-4">
-                            <h3 class="text-3xl font-space font-bold">ENTER LITE</h3>
-                            <p class="text-white/40 text-sm leading-relaxed font-light">
-                                <span class="text-white font-bold opacity-100">"Code meets Fun"</span><br/>
-                                Exploring the joy of technology through experimental content and vlogs combining tech trends and everyday fun.
-                            </p>
-                        </div>
-                        <div class="pt-6">
-                            <span class="px-6 py-2 bg-orange-500/20 text-orange-400 text-[10px] font-bold uppercase rounded-full tracking-[0.3em]">Under Construction</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-32 px-8 min-h-[50vh] flex flex-col justify-center items-center text-center bg-gradient-to-t from-cyan-950/30 to-transparent">
-            <h2 class="text-5xl md:text-7xl font-space font-black mb-12 tracking-tighter uppercase">Beyond<br/>The Limits.</h2>
-            <p class="max-w-2xl mx-auto text-white/50 mb-16 text-base leading-relaxed tracking-wider font-light">
-                Reading world patterns through AI and data, creating new value at the interface of art and technology.<br/>
-                Always welcome for collaboration or project inquiries.
+            <p class="max-w-md text-white/50 text-sm leading-relaxed mb-2">
+              Where code meet creativity. Interactive experiences powered by
+              neon aesthetics and physics engines.
             </p>
-            <div class="flex flex-col md:flex-row justify-center gap-6">
-                <a href="mailto:contact@lastjung.io" class="px-12 py-5 bg-white text-black font-black font-space tracking-widest text-[10px] rounded-full transition-all hover:scale-110 active:scale-95 shadow-[0_0_40px_rgba(255,255,255,0.3)]">
-                    SEND AN ENQUIRY
-                </a>
-                <a href="https://github.com/lastjung" target="_blank" class="px-12 py-5 glass border-white/20 hover:border-white/80 text-white font-bold font-space tracking-widest text-[10px] rounded-full transition-all hover:scale-105 active:scale-95 uppercase">
-                    GitHub Profile
-                </a>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project Card: Steampunk Wave Flight -->
+            <div
+              class="group relative glass p-8 rounded-2xl hover:border-amber-500/50 transition-all border border-white/5 overflow-hidden flex flex-col justify-between cursor-pointer h-full"
+              onclick="
+                window.open('https://lastjung.github.io/wave-flight/', '_blank')
+              "
+            >
+              <div class="space-y-6">
+                <div
+                  class="w-full h-40 bg-gradient-to-br from-amber-500/20 to-black rounded-xl border border-white/5 group-hover:border-amber-500/30 transition-all flex items-center justify-center relative overflow-hidden"
+                >
+                  <span
+                    class="font-space font-black text-4xl text-amber-500 shadow-neon z-10"
+                    >WAVE</span
+                  >
+                  <!-- Subtle steam effect or gears could be added here in the future -->
+                  <div class="absolute inset-0 opacity-20 pointer-events-none">
+                    <div
+                      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 border-4 border-amber-600 rounded-full animate-spin-slow"
+                    ></div>
+                  </div>
+                </div>
+                <h3 class="text-2xl font-space font-bold">
+                  Steampunk Wave Flight
+                </h3>
+                <p class="text-white/60 text-sm leading-relaxed">
+                  Immersive 3D steampunk flight simulator with real-time terrain
+                  and adaptive Web Audio. Pilot a brass airship over a neon
+                  ocean.
+                </p>
+              </div>
+              <div
+                class="flex justify-between items-center pt-8 border-t border-white/5"
+              >
+                <div class="flex gap-4">
+                  <a
+                    href="https://lastjung.github.io/wave-flight/"
+                    target="_blank"
+                    onclick="event.stopPropagation()"
+                    class="text-[10px] uppercase font-bold tracking-widest text-amber-400 hover:text-white transition-colors"
+                    >Live ↗</a
+                  >
+                  <a
+                    href="https://github.com/lastjung/wave-flight"
+                    target="_blank"
+                    onclick="event.stopPropagation()"
+                    class="text-[10px] uppercase font-bold tracking-widest text-amber-400 hover:text-white transition-colors"
+                    >Github ↗</a
+                  >
+                </div>
+                <span class="text-[9px] text-white/20 font-bold"
+                  >#ThreeJS #WebAudio</span
+                >
+              </div>
             </div>
-        </section>
+            <!-- Project Card: Brick Breaker -->
+            <div
+              class="group relative glass p-8 rounded-2xl hover:border-green-500/50 transition-all border border-white/5 overflow-hidden flex flex-col justify-between cursor-pointer h-full"
+              onclick="
+                window.open(
+                  'https://lastjung.github.io/brick_breaker/',
+                  '_blank',
+                )
+              "
+            >
+              <div class="space-y-6">
+                <div
+                  class="w-full h-40 bg-[#1a1a1a] rounded-xl border-[6px] border-[#333] relative shadow-2xl group-hover:border-green-500/50 transition-all overflow-hidden flex items-center justify-center"
+                >
+                  <!-- Bezel Dot -->
+                  <div
+                    class="absolute top-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-white/20 rounded-full"
+                  ></div>
+                  <img
+                    src="assets/brick-breaker-custom.png"
+                    alt="Neon Brick Breaker"
+                    class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                  />
+                </div>
+                <h3 class="text-2xl font-space font-bold">
+                  Neon Brick Breaker
+                </h3>
+                <p class="text-white/60 text-sm leading-relaxed">
+                  A neon-themed brick breaker game created with "Vibe Coding".
+                  Modern vibes added to classic fun.
+                </p>
+              </div>
+              <div
+                class="flex justify-between items-center pt-8 border-t border-white/5"
+              >
+                <div class="flex gap-4">
+                  <a
+                    href="https://lastjung.github.io/brick_breaker/"
+                    target="_blank"
+                    onclick="event.stopPropagation()"
+                    class="text-[10px] uppercase font-bold tracking-widest text-green-400 hover:text-white transition-colors"
+                    >Live ↗</a
+                  >
+                  <a
+                    href="https://github.com/lastjung/brick_breaker"
+                    target="_blank"
+                    onclick="event.stopPropagation()"
+                    class="text-[10px] uppercase font-bold tracking-widest text-green-400 hover:text-white transition-colors"
+                    >Github ↗</a
+                  >
+                </div>
+                <span class="text-[9px] text-white/20 font-bold">#GameJS</span>
+              </div>
+            </div>
+
+            <!-- Project Card: Sort-Compare -->
+            <div
+              class="group relative glass p-8 rounded-2xl hover:border-cyan-500/50 transition-all border border-white/5 overflow-hidden flex flex-col justify-between cursor-pointer h-full"
+              onclick="
+                window.open(
+                  'https://lastjung.github.io/sort-compare/',
+                  '_blank',
+                )
+              "
+            >
+              <div class="space-y-6">
+                <div
+                  class="w-full h-40 bg-[#1a1a1a] rounded-xl border-[6px] border-[#333] relative shadow-2xl group-hover:border-cyan-500/50 transition-all overflow-hidden flex items-center justify-center"
+                >
+                  <!-- Bezel Dot -->
+                  <div
+                    class="absolute top-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-white/20 rounded-full"
+                  ></div>
+                  <img
+                    src="assets/sort-compare-custom.png"
+                    alt="Sort Compare"
+                    class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                  />
+                </div>
+                <h3 class="text-2xl font-space font-bold">Sort-Compare</h3>
+                <p class="text-white/60 text-sm leading-relaxed">
+                  Interactive visualization of various sorting algorithms
+                  side-by-side. Analyze efficiency with style.
+                </p>
+              </div>
+              <div
+                class="flex justify-between items-center pt-8 border-t border-white/5"
+              >
+                <div class="flex gap-4">
+                  <a
+                    href="https://lastjung.github.io/sort-compare/"
+                    target="_blank"
+                    onclick="event.stopPropagation()"
+                    class="text-[10px] uppercase font-bold tracking-widest text-cyan-400 hover:text-white transition-colors"
+                    >Live ↗</a
+                  >
+                  <a
+                    href="https://github.com/lastjung/sort-compare"
+                    target="_blank"
+                    onclick="event.stopPropagation()"
+                    class="text-[10px] uppercase font-bold tracking-widest text-cyan-400 hover:text-white transition-colors"
+                    >Github ↗</a
+                  >
+                </div>
+                <span class="text-[9px] text-white/20 font-bold">#Algo</span>
+              </div>
+            </div>
+
+            <!-- Project Card: Retro Flight -->
+            <div
+              class="group relative glass p-8 rounded-2xl hover:border-orange-500/50 transition-all border border-white/5 overflow-hidden flex flex-col justify-between cursor-pointer h-full"
+              onclick="
+                window.open(
+                  'https://lastjung.github.io/openai_experience/retro-wave-flight/index.html',
+                  '_blank',
+                )
+              "
+            >
+              <div class="space-y-6">
+                <div
+                  class="w-full h-40 bg-gradient-to-br from-orange-500/20 to-black rounded-xl border border-white/5 group-hover:border-orange-500/30 transition-all flex items-center justify-center"
+                >
+                  <span
+                    class="font-space font-black text-4xl text-orange-500 shadow-neon"
+                    >FLY</span
+                  >
+                </div>
+                <h3 class="text-2xl font-space font-bold">Retro Flight</h3>
+                <p class="text-white/60 text-sm leading-relaxed">
+                  Endless synthwave flight simulator. Explore procedural
+                  landscapes in an 80s-inspired retro-future.
+                </p>
+              </div>
+              <div
+                class="flex justify-between items-center pt-8 border-t border-white/5"
+              >
+                <div class="flex gap-4">
+                  <a
+                    href="https://lastjung.github.io/openai_experience/retro-wave-flight/index.html"
+                    target="_blank"
+                    onclick="event.stopPropagation()"
+                    class="text-[10px] uppercase font-bold tracking-widest text-orange-400 hover:text-white transition-colors"
+                    >Live ↗</a
+                  >
+                </div>
+                <span class="text-[9px] text-white/20 font-bold">#Retro</span>
+              </div>
+            </div>
+
+            <!-- Project Card: Synth Shooter -->
+            <div
+              class="group relative glass p-8 rounded-2xl hover:border-red-500/50 transition-all border border-white/5 overflow-hidden flex flex-col justify-between cursor-pointer h-full"
+              onclick="
+                window.open(
+                  'https://lastjung.github.io/openai_experience/synthwave-shooter/index.html',
+                  '_blank',
+                )
+              "
+            >
+              <div class="space-y-6">
+                <div
+                  class="w-full h-40 bg-[#1a1a1a] rounded-xl border-[6px] border-[#333] relative shadow-2xl group-hover:border-red-500/50 transition-all overflow-hidden flex items-center justify-center"
+                >
+                  <!-- Bezel Dot -->
+                  <div
+                    class="absolute top-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-white/20 rounded-full"
+                  ></div>
+                  <img
+                    src="assets/synthwave-shooter-custom.png"
+                    alt="Neon Shooter"
+                    class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                  />
+                </div>
+                <h3 class="text-2xl font-space font-bold">Neon Shooter</h3>
+                <p class="text-white/60 text-sm leading-relaxed">
+                  High-energy synthwave rail shooter. Blast through enemies in a
+                  neon-drenched grid world.
+                </p>
+              </div>
+              <div
+                class="flex justify-between items-center pt-8 border-t border-white/5"
+              >
+                <div class="flex gap-4">
+                  <a
+                    href="https://lastjung.github.io/openai_experience/synthwave-shooter/index.html"
+                    target="_blank"
+                    onclick="event.stopPropagation()"
+                    class="text-[10px] uppercase font-bold tracking-widest text-red-400 hover:text-white transition-colors"
+                    >Live ↗</a
+                  >
+                </div>
+                <span class="text-[9px] text-white/20 font-bold">#Action</span>
+              </div>
+            </div>
+
+            <!-- Project Card: Falling Sand -->
+            <div
+              class="group relative glass p-8 rounded-2xl hover:border-yellow-500/50 transition-all border border-white/5 overflow-hidden flex flex-col justify-between cursor-pointer h-full"
+              onclick="
+                window.open(
+                  'https://lastjung.github.io/openai_experience/falling-sand/index.html',
+                  '_blank',
+                )
+              "
+            >
+              <div class="space-y-6">
+                <div
+                  class="w-full h-40 bg-[#1a1a1a] rounded-xl border-[6px] border-[#333] relative shadow-2xl group-hover:border-yellow-500/50 transition-all overflow-hidden flex items-center justify-center"
+                >
+                  <!-- Bezel Dot -->
+                  <div
+                    class="absolute top-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-white/20 rounded-full"
+                  ></div>
+                  <img
+                    src="assets/falling-sand-custom.png"
+                    alt="Falling Sand"
+                    class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                  />
+                </div>
+                <h3 class="text-2xl font-space font-bold">Falling Sand</h3>
+                <p class="text-white/60 text-sm leading-relaxed">
+                  Particle physics sandbox. Experiment with elements, gravity,
+                  and chemical reactions in high-perf JS.
+                </p>
+              </div>
+              <div
+                class="flex justify-between items-center pt-8 border-t border-white/5"
+              >
+                <div class="flex gap-4">
+                  <a
+                    href="https://lastjung.github.io/openai_experience/falling-sand/index.html"
+                    target="_blank"
+                    onclick="event.stopPropagation()"
+                    class="text-[10px] uppercase font-bold tracking-widest text-yellow-400 hover:text-white transition-colors"
+                    >Live ↗</a
+                  >
+                </div>
+                <span class="text-[9px] text-white/20 font-bold">#Physics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- YouTube Section -->
+      <section
+        id="youtube"
+        class="py-32 px-8 min-h-screen flex justify-center items-center bg-gradient-to-b from-transparent to-red-950/30"
+      >
+        <div class="max-w-6xl w-full text-center space-y-24">
+          <div class="space-y-4">
+            <span
+              class="text-red-500 font-bold text-xs tracking-[0.5em] uppercase"
+              >Visonary Media</span
+            >
+            <h2
+              class="text-5xl md:text-8xl font-space font-black uppercase tracking-tighter"
+            >
+              TRANS-LITE<br /><span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500"
+                >EXPERIENCE</span
+              >
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div
+              class="break-inside-avoid group relative glass p-12 rounded-[2.5rem] space-y-10 hover:border-red-500/40 transition-all duration-500 border border-white/10 cursor-pointer"
+              onclick="
+                window.open('https://www.youtube.com/@TechPulse-w8z', '_blank')
+              "
+            >
+              <div
+                class="w-24 h-24 bg-red-500/10 rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:rotate-12 transition-transform"
+              >
+                <svg
+                  class="w-12 h-12 text-red-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 .61-.03 1.3-.1 2.1-.06.8-.15 1.43-.28 1.9-.13.47-.35.84-.66 1.12-.31.28-.71.48-1.19.6-.48.12-1.17.21-2.07.27C16.64 18.06 14.88 18 12.33 18l-1.33.01c-2.55 0-4.31-.06-5.3-.12-1-.06-1.69-.15-2.07-.27-.48-.12-.88-.32-1.19-.6a2.8 2.8 0 01-.66-1.12c-.13-.47-.22-1.1-.28-1.9a32.32 32.32 0 01-.1-2.1L1.4 12c0-.61.03-1.3.1-2.1l.28-1.9c.13-.47.35-.84.66-1.12.31-.28.71-.48 1.19-.6.48-.12 1.17-.21 2.07-.27C6.69 5.94 8.41 6 10.96 6l1.33-.01c2.55 0 4.31.06 5.3.12 1 .06 1.69.15 2.07.27.48.12.88.32 1.19.6.31.28.53.65.66 1.12z"
+                  />
+                </svg>
+              </div>
+              <div class="space-y-4">
+                <h3 class="text-3xl font-space font-bold uppercase">
+                  TechPulse
+                </h3>
+                <p class="text-white/40 text-sm leading-relaxed font-light">
+                  <span class="text-white font-bold opacity-100"
+                    >"Visualize the Unseen"</span
+                  ><br />
+                  Insights into math, coding, and future tech. Bridging theory
+                  and implementation through high-quality motion graphics and
+                  code.
+                </p>
+              </div>
+              <div class="pt-6">
+                <span
+                  class="px-6 py-3 bg-red-500/10 border border-red-500/30 text-red-500 text-[10px] font-bold uppercase rounded-full tracking-[0.3em] group-hover:bg-red-500 group-hover:text-white transition-all"
+                  >Visit Channel ↗</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="break-inside-avoid break-inside-avoid group relative glass p-12 rounded-[2.5rem] space-y-10 hover:border-orange-500/40 transition-all duration-500 border border-white/10"
+            >
+              <div
+                class="w-24 h-24 bg-orange-500/10 rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:-rotate-12 transition-transform"
+              >
+                <svg
+                  class="w-12 h-12 text-orange-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <div class="space-y-4">
+                <h3 class="text-3xl font-space font-bold">ENTER LITE</h3>
+                <p class="text-white/40 text-sm leading-relaxed font-light">
+                  <span class="text-white font-bold opacity-100"
+                    >"Code meets Fun"</span
+                  ><br />
+                  Exploring the joy of technology through experimental content
+                  and vlogs combining tech trends and everyday fun.
+                </p>
+              </div>
+              <div class="pt-6">
+                <span
+                  class="px-6 py-2 bg-orange-500/20 text-orange-400 text-[10px] font-bold uppercase rounded-full tracking-[0.3em]"
+                  >Under Construction</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section
+        id="contact"
+        class="py-32 px-8 min-h-[50vh] flex flex-col justify-center items-center text-center bg-gradient-to-t from-cyan-950/30 to-transparent"
+      >
+        <h2
+          class="text-5xl md:text-7xl font-space font-black mb-12 tracking-tighter uppercase"
+        >
+          Beyond<br />The Limits.
+        </h2>
+        <p
+          class="max-w-2xl mx-auto text-white/50 mb-16 text-base leading-relaxed tracking-wider font-light"
+        >
+          Reading world patterns through AI and data, creating new value at the
+          interface of art and technology.<br />
+          Always welcome for collaboration or project inquiries.
+        </p>
+        <div class="flex flex-col md:flex-row justify-center gap-6">
+          <a
+            href="mailto:contact@lastjung.io"
+            class="px-12 py-5 bg-white text-black font-black font-space tracking-widest text-[10px] rounded-full transition-all hover:scale-110 active:scale-95 shadow-[0_0_40px_rgba(255,255,255,0.3)]"
+          >
+            SEND AN ENQUIRY
+          </a>
+          <a
+            href="https://github.com/lastjung"
+            target="_blank"
+            class="px-12 py-5 glass border-white/20 hover:border-white/80 text-white font-bold font-space tracking-widest text-[10px] rounded-full transition-all hover:scale-105 active:scale-95 uppercase"
+          >
+            GitHub Profile
+          </a>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
-    <footer class="py-20 px-8 border-t border-white/5 text-[9px] font-space tracking-[0.5em] text-white/20 uppercase flex flex-col md:flex-row justify-between items-center gap-8 relative z-10 bg-black/50">
-        <div><a href="summary.html" class="hover:text-white/40 transition-colors">©</a> 2026 LASTJUNG . ENGINEERING</div>
-        <div class="flex gap-12">
-            <a href="https://github.com/lastjung" target="_blank" class="hover:text-cyan-400 transition-colors cursor-pointer">Github</a>
-            <a href="https://lastjung.github.io/openai_experience/" target="_blank" class="hover:text-purple-400 transition-colors cursor-pointer">Experience</a>
-            <a href="#" class="hover:text-red-400 transition-colors cursor-pointer">YouTube</a>
-            <a href="#" class="hover:text-indigo-400 transition-colors cursor-pointer">LinkedIn</a>
-        </div>
+    <footer
+      class="py-20 px-8 border-t border-white/5 text-[9px] font-space tracking-[0.5em] text-white/20 uppercase flex flex-col md:flex-row justify-between items-center gap-8 relative z-10 bg-black/50"
+    >
+      <div>
+        <a href="summary.html" class="hover:text-white/40 transition-colors"
+          >©</a
+        >
+        2026 LASTJUNG . ENGINEERING
+      </div>
+      <div class="flex gap-12">
+        <a
+          href="https://github.com/lastjung"
+          target="_blank"
+          class="hover:text-cyan-400 transition-colors cursor-pointer"
+          >Github</a
+        >
+        <a
+          href="https://lastjung.github.io/openai_experience/"
+          target="_blank"
+          class="hover:text-purple-400 transition-colors cursor-pointer"
+          >Experience</a
+        >
+        <a href="#" class="hover:text-red-400 transition-colors cursor-pointer"
+          >YouTube</a
+        >
+        <a
+          href="#"
+          class="hover:text-indigo-400 transition-colors cursor-pointer"
+          >LinkedIn</a
+        >
+      </div>
     </footer>
 
     <!-- Core Script -->
     <script src="js/fourier-bg.js"></script>
     <script>
-        // Reveal on Scroll
-        const observerOptions = { threshold: 0.1 };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.add('reveal');
-            observer.observe(section);
+      // Reveal on Scroll
+      const observerOptions = { threshold: 0.1 };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          }
         });
-        
-        // Navigation backdrop change on scroll
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('bg-black/80', 'py-4');
-                nav.classList.remove('bg-black/50', 'py-6');
-            } else {
-                nav.classList.remove('bg-black/80', 'py-4');
-                nav.classList.add('bg-black/50', 'py-6');
-            }
-        });
+      }, observerOptions);
 
-        // Mobile Bottom Nav Visibility
-        const bottomNav = document.getElementById('bottom-nav');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                bottomNav.classList.remove('translate-y-20', 'opacity-0');
-                bottomNav.classList.add('translate-y-0', 'opacity-100');
-            } else {
-                bottomNav.classList.add('translate-y-20', 'opacity-0');
-                bottomNav.classList.remove('translate-y-0', 'opacity-100');
-            }
-        });
+      document.querySelectorAll("section").forEach((section) => {
+        section.classList.add("reveal");
+        observer.observe(section);
+      });
 
-        // Kinetic Typography: Independent character animation with preserved gradients
-        const heroTitle = document.getElementById('hero-title');
-        
-        const splitTextIntoSpans = (el) => {
-            const nodes = Array.from(el.childNodes);
-            el.innerHTML = '';
-            
-            nodes.forEach(node => {
-                if (node.nodeType === 3) { // Text Node
-                    const text = node.textContent;
-                    text.split('').forEach(char => {
-                        if (char.trim() === '') {
-                            el.appendChild(document.createTextNode(char));
-                        } else {
-                            const span = document.createElement('span');
-                            span.className = 'kinetic-char inline-block';
-                            span.style.transition = 'transform 0.1s cubic-bezier(0.1, 0.4, 0.2, 1)';
-                            span.textContent = char;
-                            el.appendChild(span);
-                        }
-                    });
-                } else if (node.nodeType === 1) { // Element Node
-                    if (node.tagName === 'BR') el.appendChild(node);
-                    else {
-                        const wrapper = node.cloneNode(false); 
-                        const isGradient = wrapper.classList.contains('bg-clip-text') || wrapper.classList.contains('text-transparent');
-                        
-                        if (isGradient) {
-                            wrapper.className = ''; 
-                            wrapper.style.display = 'contents';
-                        }
-                        
-                        const textContent = node.textContent;
-                        textContent.split('').forEach((char, i) => {
-                            if (char.trim() === '') {
-                                wrapper.appendChild(document.createTextNode(char));
-                            } else {
-                                const span = document.createElement('span');
-                                span.className = 'kinetic-char inline-block';
-                                span.style.transition = 'transform 0.1s cubic-bezier(0.1, 0.4, 0.2, 1)';
-                                
-                                if (isGradient) {
-                                    span.className += ' font-bold';
-                                    span.style.backgroundImage = 'linear-gradient(to right, #22d3ee, #6366f1, #9333ea)';
-                                    span.style.webkitBackgroundClip = 'text';
-                                    span.style.backgroundClip = 'text';
-                                    span.style.webkitTextFillColor = 'transparent';
-                                    span.style.color = 'transparent';
-                                    
-                                    const totalChars = textContent.length;
-                                    span.style.backgroundSize = `${totalChars * 100}% 100%`;
-                                    span.style.backgroundPosition = `${(i / Math.max(1, totalChars - 1)) * 100}% 0`;
-                                }
-                                span.textContent = char;
-                                wrapper.appendChild(span);
-                            }
-                        });
-                        el.appendChild(wrapper);
-                    }
-                }
-            });
-        };
-
-        if (heroTitle) splitTextIntoSpans(heroTitle);
-
-        const chars = document.querySelectorAll('.kinetic-char');
-        let currentTargetSkew = 0;
-        let skews = Array.from({ length: chars.length }).fill(0);
-        let lastY = window.scrollY;
-        
-        window.addEventListener('scroll', () => {
-            const nowY = window.scrollY;
-            const diff = nowY - lastY;
-            currentTargetSkew = Math.max(-60, Math.min(60, diff * 6.0));
-            lastY = nowY;
-        }, { passive: true });
-
-        const animate = () => {
-            chars.forEach((char, i) => {
-                const speed = 0.08 + (i % 8) * 0.02;
-                skews[i] += (currentTargetSkew - skews[i]) * speed;
-                
-                if (Math.abs(skews[i]) > 0.05) {
-                    char.style.transform = `skewY(${skews[i]}deg)`;
-                } else {
-                    char.style.transform = '';
-                }
-            });
-            currentTargetSkew *= 0.9;
-            requestAnimationFrame(animate);
-        };
-
-        if (chars.length > 0) animate();
-
-        // [DESIGN UPGRADE] Mouse Spotlight Effect
-        const spotlight = document.createElement('div');
-        spotlight.className = 'fixed inset-0 pointer-events-none z-0 transition-opacity duration-500';
-        spotlight.style.background = 'radial-gradient(600px circle at var(--x, 50%) var(--y, 50%), rgba(34, 211, 238, 0.07), transparent 40%)';
-        document.body.appendChild(spotlight);
-
-        window.addEventListener('mousemove', (e) => {
-            spotlight.style.setProperty('--x', `${e.clientX}px`);
-            spotlight.style.setProperty('--y', `${e.clientY}px`);
-        });
-
-        // [DESIGN UPGRADE] Scroll Indicator Animation
-        const scrollLine = document.querySelector('.w-px.h-16');
-        if (scrollLine) {
-            scrollLine.animate([
-                { height: '0%', opacity: 0 },
-                { height: '100%', opacity: 1 },
-                { height: '0%', opacity: 0, offset: 0.9 } // Quick fade out for loop
-            ], {
-                duration: 2000,
-                iterations: Infinity,
-                easing: 'cubic-bezier(0.45, 0, 0.55, 1)'
-            });
+      // Navigation backdrop change on scroll
+      window.addEventListener("scroll", () => {
+        const nav = document.querySelector("nav");
+        if (window.scrollY > 50) {
+          nav.classList.add("bg-black/80", "py-4");
+          nav.classList.remove("bg-black/50", "py-6");
+        } else {
+          nav.classList.remove("bg-black/80", "py-4");
+          nav.classList.add("bg-black/50", "py-6");
         }
-        
-        // [DESIGN UPGRADE] Section Reveal Animation
-        const revealObserverOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+      });
 
-        const sectionObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    sectionObserver.unobserve(entry.target); // Reveal only once
-                }
+      // Mobile Bottom Nav Visibility
+      const bottomNav = document.getElementById("bottom-nav");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          bottomNav.classList.remove("translate-y-20", "opacity-0");
+          bottomNav.classList.add("translate-y-0", "opacity-100");
+        } else {
+          bottomNav.classList.add("translate-y-20", "opacity-0");
+          bottomNav.classList.remove("translate-y-0", "opacity-100");
+        }
+      });
+
+      // Kinetic Typography: Independent character animation with preserved gradients
+      const heroTitle = document.getElementById("hero-title");
+
+      const splitTextIntoSpans = (el) => {
+        const nodes = Array.from(el.childNodes);
+        el.innerHTML = "";
+
+        nodes.forEach((node) => {
+          if (node.nodeType === 3) {
+            // Text Node
+            const text = node.textContent;
+            text.split("").forEach((char) => {
+              if (char.trim() === "") {
+                el.appendChild(document.createTextNode(char));
+              } else {
+                const span = document.createElement("span");
+                span.className = "kinetic-char inline-block";
+                span.style.transition =
+                  "transform 0.1s cubic-bezier(0.1, 0.4, 0.2, 1)";
+                span.textContent = char;
+                el.appendChild(span);
+              }
             });
-        }, revealObserverOptions);
+          } else if (node.nodeType === 1) {
+            // Element Node
+            if (node.tagName === "BR") el.appendChild(node);
+            else {
+              const wrapper = node.cloneNode(false);
+              const isGradient =
+                wrapper.classList.contains("bg-clip-text") ||
+                wrapper.classList.contains("text-transparent");
 
-        // Apply reveal classes to sections and key elements
-        document.querySelectorAll('section, .project-card, footer').forEach(el => {
-            el.classList.add('transition-all', 'duration-1000', 'ease-out', 'opacity-0', 'translate-y-10');
-            sectionObserver.observe(el);
+              if (isGradient) {
+                wrapper.className = "";
+                wrapper.style.display = "contents";
+              }
+
+              const textContent = node.textContent;
+              textContent.split("").forEach((char, i) => {
+                if (char.trim() === "") {
+                  wrapper.appendChild(document.createTextNode(char));
+                } else {
+                  const span = document.createElement("span");
+                  span.className = "kinetic-char inline-block";
+                  span.style.transition =
+                    "transform 0.1s cubic-bezier(0.1, 0.4, 0.2, 1)";
+
+                  if (isGradient) {
+                    span.className += " font-bold";
+                    span.style.backgroundImage =
+                      "linear-gradient(to right, #22d3ee, #6366f1, #9333ea)";
+                    span.style.webkitBackgroundClip = "text";
+                    span.style.backgroundClip = "text";
+                    span.style.webkitTextFillColor = "transparent";
+                    span.style.color = "transparent";
+
+                    const totalChars = textContent.length;
+                    span.style.backgroundSize = `${totalChars * 100}% 100%`;
+                    span.style.backgroundPosition = `${(i / Math.max(1, totalChars - 1)) * 100}% 0`;
+                  }
+                  span.textContent = char;
+                  wrapper.appendChild(span);
+                }
+              });
+              el.appendChild(wrapper);
+            }
+          }
         });
+      };
 
+      if (heroTitle) splitTextIntoSpans(heroTitle);
+
+      const chars = document.querySelectorAll(".kinetic-char");
+      let currentTargetSkew = 0;
+      let skews = Array.from({ length: chars.length }).fill(0);
+      let lastY = window.scrollY;
+
+      window.addEventListener(
+        "scroll",
+        () => {
+          const nowY = window.scrollY;
+          const diff = nowY - lastY;
+          currentTargetSkew = Math.max(-60, Math.min(60, diff * 6.0));
+          lastY = nowY;
+        },
+        { passive: true },
+      );
+
+      const animate = () => {
+        chars.forEach((char, i) => {
+          const speed = 0.08 + (i % 8) * 0.02;
+          skews[i] += (currentTargetSkew - skews[i]) * speed;
+
+          if (Math.abs(skews[i]) > 0.05) {
+            char.style.transform = `skewY(${skews[i]}deg)`;
+          } else {
+            char.style.transform = "";
+          }
+        });
+        currentTargetSkew *= 0.9;
+        requestAnimationFrame(animate);
+      };
+
+      if (chars.length > 0) animate();
+
+      // [DESIGN UPGRADE] Mouse Spotlight Effect
+      const spotlight = document.createElement("div");
+      spotlight.className =
+        "fixed inset-0 pointer-events-none z-0 transition-opacity duration-500";
+      spotlight.style.background =
+        "radial-gradient(600px circle at var(--x, 50%) var(--y, 50%), rgba(34, 211, 238, 0.07), transparent 40%)";
+      document.body.appendChild(spotlight);
+
+      window.addEventListener("mousemove", (e) => {
+        spotlight.style.setProperty("--x", `${e.clientX}px`);
+        spotlight.style.setProperty("--y", `${e.clientY}px`);
+      });
+
+      // [DESIGN UPGRADE] Scroll Indicator Animation
+      const scrollLine = document.querySelector(".w-px.h-16");
+      if (scrollLine) {
+        scrollLine.animate(
+          [
+            { height: "0%", opacity: 0 },
+            { height: "100%", opacity: 1 },
+            { height: "0%", opacity: 0, offset: 0.9 }, // Quick fade out for loop
+          ],
+          {
+            duration: 2000,
+            iterations: Infinity,
+            easing: "cubic-bezier(0.45, 0, 0.55, 1)",
+          },
+        );
+      }
+
+      // [DESIGN UPGRADE] Section Reveal Animation
+      const revealObserverOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove("opacity-0", "translate-y-10");
+            entry.target.classList.add("opacity-100", "translate-y-0");
+            sectionObserver.unobserve(entry.target); // Reveal only once
+          }
+        });
+      }, revealObserverOptions);
+
+      // Apply reveal classes to sections and key elements
+      document
+        .querySelectorAll("section, .project-card, footer")
+        .forEach((el) => {
+          el.classList.add(
+            "transition-all",
+            "duration-1000",
+            "ease-out",
+            "opacity-0",
+            "translate-y-10",
+          );
+          sectionObserver.observe(el);
+        });
     </script>
   </body>
 </html>
